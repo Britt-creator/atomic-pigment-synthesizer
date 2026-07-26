@@ -1,0 +1,1088 @@
+[
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "stepper_driver_module",
+    "protocol": "gpio",
+    "sourcePin": "D12",
+    "targetPin": "STEP"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "stepper_driver_module",
+    "protocol": "gpio",
+    "sourcePin": "D14",
+    "targetPin": "DIR"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "magnetic_field_h_bridge",
+    "protocol": "pwm",
+    "sourcePin": "D25",
+    "targetPin": "IN1"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "magnetic_field_h_bridge",
+    "protocol": "pwm",
+    "sourcePin": "D26",
+    "targetPin": "IN2"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "induction_heater_module",
+    "voltage": "24V",
+    "sourcePin": "V24_OUT",
+    "targetPin": "V+"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "magnetic_field_h_bridge",
+    "voltage": "12V",
+    "sourcePin": "V12_OUT",
+    "targetPin": "12V"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "stepper_driver_module",
+    "voltage": "12V",
+    "sourcePin": "V12_OUT",
+    "targetPin": "VMOT"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "hv_relay",
+    "voltage": "12V",
+    "sourcePin": "V12_OUT",
+    "targetPin": "COM"
+  },
+  {
+    "type": "power",
+    "source": "hv_relay",
+    "target": "high_voltage_generator",
+    "voltage": "12V",
+    "sourcePin": "NO",
+    "targetPin": "V_IN+"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "hv_relay",
+    "voltage": "3.3V",
+    "sourcePin": "D32",
+    "targetPin": "IN"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "main_controller_esp32",
+    "voltage": "5V",
+    "sourcePin": "V5_OUT",
+    "targetPin": "VCC"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "resonate_particle_chronograph",
+    "voltage": "12V",
+    "sourcePin": "V12_OUT",
+    "targetPin": "VCC"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "ultrasonic_driver_array",
+    "voltage": "12V",
+    "sourcePin": "V12_OUT",
+    "targetPin": "VCC"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "resonate_particle_chronograph",
+    "voltage": "3.3V",
+    "sourcePin": "D4",
+    "targetPin": "LASER_PWM"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "ultrasonic_driver_array",
+    "voltage": "3.3V",
+    "sourcePin": "D2",
+    "targetPin": "OSC_1"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "ultrasonic_driver_array",
+    "voltage": "3.3V",
+    "sourcePin": "D15",
+    "targetPin": "OSC_2"
+  },
+  {
+    "type": "power",
+    "source": "magnetic_field_h_bridge",
+    "target": "ionic_steering_coils",
+    "voltage": "12V",
+    "sourcePin": "OUT3",
+    "targetPin": "COIL_A_POS"
+  },
+  {
+    "type": "power",
+    "source": "magnetic_field_h_bridge",
+    "target": "ionic_steering_coils",
+    "voltage": "12V",
+    "sourcePin": "OUT4",
+    "targetPin": "COIL_A_NEG"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "induction_heater_module",
+    "sourcePin": "GND",
+    "targetPin": "V-"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "magnetic_field_h_bridge",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "stepper_driver_module",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "hv_relay",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "hv_relay",
+    "target": "high_voltage_generator",
+    "sourcePin": "GND",
+    "targetPin": "V_IN-"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "main_controller_esp32",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "resonate_particle_chronograph",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "ultrasonic_driver_array",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "resonate_particle_chronograph",
+    "protocol": "uart",
+    "sourcePin": "D17",
+    "targetPin": "TX"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "resonate_particle_chronograph",
+    "protocol": "uart",
+    "sourcePin": "D16",
+    "targetPin": "RX"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "mosfet_argon_driver",
+    "protocol": "gpio",
+    "sourcePin": "D13",
+    "targetPin": "GATE"
+  },
+  {
+    "type": "power",
+    "source": "stepper_driver_module",
+    "target": "ball_mill_stepper",
+    "voltage": "12V",
+    "sourcePin": "1A",
+    "targetPin": "A+"
+  },
+  {
+    "type": "power",
+    "source": "stepper_driver_module",
+    "target": "ball_mill_stepper",
+    "voltage": "12V",
+    "sourcePin": "1B",
+    "targetPin": "A-"
+  },
+  {
+    "type": "power",
+    "source": "stepper_driver_module",
+    "target": "ball_mill_stepper",
+    "voltage": "12V",
+    "sourcePin": "2A",
+    "targetPin": "B+"
+  },
+  {
+    "type": "power",
+    "source": "stepper_driver_module",
+    "target": "ball_mill_stepper",
+    "voltage": "12V",
+    "sourcePin": "2B",
+    "targetPin": "B-"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "stepper_driver_module",
+    "voltage": "12V",
+    "sourcePin": "V12_OUT",
+    "targetPin": "VMOT"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "stepper_driver_module",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "stepper_driver_module",
+    "voltage": "3.3V",
+    "sourcePin": "D12",
+    "targetPin": "STEP"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "stepper_driver_module",
+    "voltage": "3.3V",
+    "sourcePin": "D14",
+    "targetPin": "DIR"
+  },
+  {
+    "type": "power",
+    "source": "mosfet_argon_driver",
+    "target": "argon_solenoid_valve",
+    "voltage": "12V",
+    "sourcePin": "DRAIN",
+    "targetPin": "NEG"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "mosfet_argon_driver",
+    "voltage": "12V",
+    "sourcePin": "V12_OUT",
+    "targetPin": "SOURCE"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "mini_vacuum_pump",
+    "voltage": "12V",
+    "sourcePin": "V12_OUT",
+    "targetPin": "POS"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "vacuum_pressure_sensor",
+    "voltage": "5V",
+    "sourcePin": "V5_OUT",
+    "targetPin": "VCC"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "vacuum_pressure_sensor",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "vacuum_pressure_sensor",
+    "voltage": "3.3V (via divider)",
+    "sourcePin": "D34",
+    "targetPin": "OUT"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "mini_vacuum_pump",
+    "sourcePin": "GND",
+    "targetPin": "NEG"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "flux_monitor_hall",
+    "voltage": "5V",
+    "sourcePin": "V5_OUT",
+    "targetPin": "VCC"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "flux_monitor_hall",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "data",
+    "source": "flux_monitor_hall",
+    "target": "main_controller_esp32",
+    "voltage": "analog_0-5V",
+    "sourcePin": "OUT",
+    "targetPin": "VN"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "mini_electrostatic_accelerator",
+    "voltage": "12V",
+    "sourcePin": "V12_OUT",
+    "targetPin": "VCC"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "mini_electrostatic_accelerator",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "data",
+    "source": "logic-level-shifter-i2c",
+    "target": "status_display",
+    "protocol": "i2c",
+    "sourcePin": "HV1",
+    "targetPin": "SCL"
+  },
+  {
+    "type": "data",
+    "source": "logic-level-shifter-i2c",
+    "target": "status_display",
+    "protocol": "i2c",
+    "sourcePin": "HV2",
+    "targetPin": "SDA"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "arcsync_reactor",
+    "voltage": "12V",
+    "sourcePin": "V12_OUT",
+    "targetPin": "VCC"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "arcsync_reactor",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "main_power_supply",
+    "target": "argon_solenoid_valve",
+    "sourcePin": "V-",
+    "targetPin": "NEG"
+  },
+  {
+    "type": "power",
+    "source": "main_power_supply",
+    "target": "status_display",
+    "sourcePin": "V-",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "main_power_supply",
+    "target": "induction_heater_module",
+    "sourcePin": "V-",
+    "targetPin": "V-"
+  },
+  {
+    "type": "power",
+    "source": "main_power_supply",
+    "target": "magnetic_field_h_bridge",
+    "sourcePin": "V-",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "main_power_supply",
+    "target": "stepper_driver_module",
+    "sourcePin": "V-",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "main_power_supply",
+    "target": "high_voltage_generator",
+    "sourcePin": "V-",
+    "targetPin": "V_IN-"
+  },
+  {
+    "type": "power",
+    "source": "main_power_supply",
+    "target": "main_controller_esp32",
+    "sourcePin": "V-",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "main_power_supply",
+    "target": "resonate_particle_chronograph",
+    "sourcePin": "V-",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "main_power_supply",
+    "target": "power_dist_block",
+    "sourcePin": "V-",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "main_power_supply",
+    "target": "mini_vacuum_pump",
+    "sourcePin": "V-",
+    "targetPin": "NEG"
+  },
+  {
+    "type": "power",
+    "source": "main_power_supply",
+    "target": "power_dist_block",
+    "voltage": "24V",
+    "sourcePin": "V+",
+    "targetPin": "V_IN"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "status_display",
+    "voltage": "5V",
+    "sourcePin": "V5_OUT",
+    "targetPin": "VCC"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "argon_solenoid_valve",
+    "voltage": "12V",
+    "sourcePin": "V12_OUT",
+    "targetPin": "POS"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "logic-level-shifter-i2c",
+    "voltage": "5V",
+    "sourcePin": "V5_OUT",
+    "targetPin": "HV"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "logic-level-shifter-i2c",
+    "voltage": "3.3V",
+    "sourcePin": "V5_OUT",
+    "targetPin": "LV"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "logic-level-shifter-spi",
+    "voltage": "5V",
+    "sourcePin": "V5_OUT",
+    "targetPin": "HV"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "logic-level-shifter-spi",
+    "voltage": "3.3V",
+    "sourcePin": "V5_OUT",
+    "targetPin": "LV"
+  },
+  {
+    "type": "data",
+    "source": "resonate_particle_chronograph",
+    "target": "mini_electrostatic_accelerator",
+    "voltage": "3.3V",
+    "sourcePin": "TRIG",
+    "targetPin": "CTRL_PWM"
+  },
+  {
+    "type": "power",
+    "source": "arcsync_reactor",
+    "target": "isotropic_field_core",
+    "voltage": "10kV",
+    "sourcePin": "P_OUT",
+    "targetPin": "COIL_IN_B"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "status_display",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "argon_solenoid_valve",
+    "sourcePin": "GND",
+    "targetPin": "NEG"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "logic-level-shifter-i2c",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "logic-level-shifter-spi",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "sic_h_bridge_pro",
+    "voltage": "24V",
+    "sourcePin": "V24_OUT",
+    "targetPin": "B_POS"
+  },
+  {
+    "type": "power",
+    "source": "power_dist_block",
+    "target": "sic_h_bridge_pro",
+    "sourcePin": "GND",
+    "targetPin": "B_NEG"
+  },
+  {
+    "type": "power",
+    "source": "sic_h_bridge_pro",
+    "target": "resonance_capacitor_bank",
+    "voltage": "24V",
+    "sourcePin": "B_POS",
+    "targetPin": "POS"
+  },
+  {
+    "type": "power",
+    "source": "sic_h_bridge_pro",
+    "target": "resonance_capacitor_bank",
+    "sourcePin": "B_NEG",
+    "targetPin": "NEG"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "sic_h_bridge_pro",
+    "voltage": "3.3V",
+    "sourcePin": "D33",
+    "targetPin": "PWM_L"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "sic_h_bridge_pro",
+    "voltage": "3.3V",
+    "sourcePin": "D27",
+    "targetPin": "PWM_R"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "logic-level-shifter-i2c",
+    "protocol": "i2c",
+    "sourcePin": "SCL",
+    "targetPin": "LV1"
+  },
+  {
+    "type": "data",
+    "source": "main_controller_esp32",
+    "target": "logic-level-shifter-i2c",
+    "protocol": "i2c",
+    "sourcePin": "SDA",
+    "targetPin": "LV2"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "neural_matrix_controller",
+    "type": "power",
+    "sourcePin": "V12_OUT",
+    "targetPin": "VCC",
+    "voltage": "12V"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "via_coil_drivers",
+    "type": "data",
+    "sourcePin": "PWM_0",
+    "targetPin": "IN_POS",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "via_coil_drivers",
+    "target": "isotropic_field_core",
+    "type": "power",
+    "sourcePin": "OUT",
+    "targetPin": "COIL_IN_A",
+    "voltage": "Variable High Current"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "via_coil_drivers",
+    "type": "power",
+    "sourcePin": "V24_OUT",
+    "targetPin": "+Vs",
+    "voltage": "24V"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "toroidal_flux_sensors",
+    "type": "power",
+    "sourcePin": "V5_OUT",
+    "targetPin": "VCC",
+    "voltage": "5V"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "neural_matrix_controller",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "via_coil_drivers",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "toroidal_flux_sensors",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "source": "main_controller_esp32",
+    "target": "can-transceiver-01",
+    "type": "data",
+    "protocol": "uart",
+    "sourcePin": "D21",
+    "targetPin": "TXD"
+  },
+  {
+    "source": "main_controller_esp32",
+    "target": "can-transceiver-01",
+    "type": "data",
+    "protocol": "uart",
+    "sourcePin": "D22",
+    "targetPin": "RXD"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "toroidal_flux_sensors",
+    "type": "data",
+    "protocol": "i2c",
+    "sourcePin": "I2C_SCL",
+    "targetPin": "SCL"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "toroidal_flux_sensors",
+    "type": "data",
+    "protocol": "i2c",
+    "sourcePin": "I2C_SDA",
+    "targetPin": "SDA"
+  },
+  {
+    "source": "spacetime_metric_modulator",
+    "target": "arcsync_reactor",
+    "type": "data",
+    "sourcePin": "SIGNAL_OUT",
+    "targetPin": "SYNC_IN",
+    "voltage": "5V"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "via_coil_drivers",
+    "type": "data",
+    "sourcePin": "PWM_1",
+    "targetPin": "IN_NEG",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "quantum_state_interferometer",
+    "type": "power",
+    "sourcePin": "V5_OUT",
+    "targetPin": "VCC",
+    "voltage": "5V"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "quantum_state_interferometer",
+    "type": "data",
+    "sourcePin": "I2C_SDA",
+    "targetPin": "SDA",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "quantum_state_interferometer",
+    "type": "data",
+    "sourcePin": "I2C_SCL",
+    "targetPin": "SCL",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "harmonic_oscillator_432hz",
+    "type": "power",
+    "sourcePin": "V3.3_OUT",
+    "targetPin": "VCC",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "harmonic_oscillator_432hz",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "quantum_state_interferometer",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "thermocouple_sensor",
+    "type": "power",
+    "sourcePin": "V3.3_OUT",
+    "targetPin": "VCC",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "thermocouple_sensor",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND",
+    "voltage": "0V"
+  },
+  {
+    "source": "logic-level-shifter-spi",
+    "target": "thermocouple_sensor",
+    "type": "data",
+    "sourcePin": "HV3",
+    "targetPin": "CS",
+    "voltage": "5V"
+  },
+  {
+    "source": "can-transceiver-01",
+    "target": "power_dist_block",
+    "type": "power",
+    "sourcePin": "VCC",
+    "targetPin": "V5_OUT",
+    "voltage": "5V"
+  },
+  {
+    "source": "can-transceiver-01",
+    "target": "power_dist_block",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND",
+    "voltage": "0V"
+  },
+  {
+    "source": "spacetime_metric_modulator",
+    "target": "neural_matrix_controller",
+    "type": "data",
+    "sourcePin": "SYNC_OUT",
+    "targetPin": "GPIO_SYNC",
+    "voltage": "5V"
+  },
+  {
+    "source": "main_controller_esp32",
+    "target": "thermocouple_sensor",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "source": "main_controller_esp32",
+    "target": "can-transceiver-01",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "source": "main_controller_esp32",
+    "target": "thermocouple_sensor",
+    "type": "data",
+    "sourcePin": "MISO",
+    "targetPin": "SO",
+    "voltage": "3.3V/5V (check shifter logic note: MISO is slave-to-master, typically 5V to 3.3V divider or shifter needed but direct 3.3V logic often used for MISO if sensor is 3.3V compatible; keeping standard SPI direct path logic for return data line based on component context provided.)"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "can-transceiver-01",
+    "type": "data",
+    "sourcePin": "CAN_H",
+    "targetPin": "CANH",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "can-transceiver-01",
+    "type": "data",
+    "sourcePin": "CAN_L",
+    "targetPin": "CANL",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "precision_timing_module",
+    "target": "phase_locked_loop_controller",
+    "type": "data",
+    "sourcePin": "10MHZ_OUT",
+    "targetPin": "R_IN",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "phase_locked_loop_controller",
+    "target": "high_power_rf_amplifier",
+    "type": "data",
+    "sourcePin": "RF_OUT",
+    "targetPin": "RF_IN",
+    "voltage": "Variable"
+  },
+  {
+    "source": "high_power_rf_amplifier",
+    "target": "degenerate_stabilizer_coils",
+    "type": "power",
+    "sourcePin": "RF_OUT",
+    "targetPin": "POS",
+    "voltage": "48V AC Pulse"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "phase_locked_loop_controller",
+    "type": "data",
+    "sourcePin": "GPIO_SYNC",
+    "targetPin": "LE",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "phase_locked_loop_controller",
+    "type": "data",
+    "sourcePin": "PWM_0",
+    "targetPin": "DATA",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "high_power_rf_amplifier",
+    "type": "power",
+    "sourcePin": "V24_OUT",
+    "targetPin": "VCC_48V",
+    "voltage": "48V (via boost)"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "precision_timing_module",
+    "type": "power",
+    "sourcePin": "V3.3_OUT",
+    "targetPin": "VCC",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "gev_multiplier_stack",
+    "target": "mini_electrostatic_accelerator",
+    "type": "power",
+    "sourcePin": "DC_OUT_GEV",
+    "targetPin": "ION_SOURCE_POS",
+    "voltage": "1.2GV"
+  },
+  {
+    "source": "spacetime_metric_modulator",
+    "target": "gev_multiplier_stack",
+    "type": "data",
+    "sourcePin": "SYNC_OUT",
+    "targetPin": "SYNC_TRG",
+    "voltage": "5V"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "gev_multiplier_stack",
+    "type": "data",
+    "sourcePin": "PWM_1",
+    "targetPin": "SYNC_TRG",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "radiation_monitor_geiger",
+    "type": "power",
+    "sourcePin": "V5_OUT",
+    "targetPin": "VCC",
+    "voltage": "5V"
+  },
+  {
+    "source": "radiation_monitor_geiger",
+    "target": "neural_matrix_controller",
+    "type": "data",
+    "sourcePin": "PULSE_OUT",
+    "targetPin": "GPIO_SYNC",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "spacetime_metric_modulator",
+    "target": "sic_h_bridge_pro",
+    "type": "data",
+    "sourcePin": "CH1",
+    "targetPin": "EN",
+    "voltage": "5V"
+  },
+  {
+    "source": "cf252_feedstock",
+    "target": "high_current_ion_source",
+    "type": "power",
+    "sourcePin": "ION_GND",
+    "targetPin": "GND",
+    "voltage": "0V"
+  },
+  {
+    "source": "high_power_rf_amplifier",
+    "target": "degenerate_stabilizer_coils",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "NEG"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "high_power_rf_amplifier",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "precision_timing_module",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "source": "gev_multiplier_stack",
+    "target": "mini_electrostatic_accelerator",
+    "type": "power",
+    "sourcePin": "GND_REF",
+    "targetPin": "GND"
+  },
+  {
+    "source": "power_dist_block",
+    "target": "radiation_monitor_geiger",
+    "type": "power",
+    "sourcePin": "GND",
+    "targetPin": "GND"
+  },
+  {
+    "source": "main_controller_esp32",
+    "target": "logic-level-shifter-spi",
+    "type": "data",
+    "sourcePin": "SCK",
+    "targetPin": "LV4",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "logic-level-shifter-spi",
+    "target": "thermocouple_sensor",
+    "type": "data",
+    "sourcePin": "HV4",
+    "targetPin": "SCK",
+    "voltage": "5V"
+  },
+  {
+    "source": "main_controller_esp32",
+    "target": "logic-level-shifter-spi",
+    "type": "data",
+    "sourcePin": "MOSI",
+    "targetPin": "LV2",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "main_controller_esp32",
+    "target": "logic-level-shifter-spi",
+    "type": "data",
+    "sourcePin": "D5",
+    "targetPin": "LV3",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "main_controller_esp32",
+    "target": "logic-level-shifter-spi",
+    "type": "data",
+    "sourcePin": "D18",
+    "targetPin": "LV1",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "high_current_ion_source",
+    "type": "data",
+    "sourcePin": "PWM_0",
+    "targetPin": "CTRL",
+    "voltage": "3.3V"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "feedstock_injector",
+    "type": "data",
+    "sourcePin": "PWM_1",
+    "targetPin": "SIGNAL_IN",
+    "voltage": "3.3V"
+  }
+]

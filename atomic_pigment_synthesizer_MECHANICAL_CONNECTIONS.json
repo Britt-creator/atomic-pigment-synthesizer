@@ -1,0 +1,307 @@
+[
+  {
+    "label": "chassis_fasteners_m3",
+    "source": "matryoshka_outer_shell",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "label": "thermal standoff spacers",
+    "source": "matryoshka_inner_thermal_chamber",
+    "target": "matryoshka_outer_shell"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "linear_rail_axis",
+    "target": "matryoshka_outer_shell"
+  },
+  {
+    "label": "ceramic clamp assembly",
+    "source": "alumina_ceramic_crucible",
+    "target": "linear_rail_axis"
+  },
+  {
+    "label": "concentric interference fit",
+    "source": "magnetic_coil_housing",
+    "target": "matryoshka_inner_thermal_chamber"
+  },
+  {
+    "label": "chassis_fasteners_m3",
+    "source": "planetary_mill_base",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "label": "press-fit stainless steel shafts",
+    "source": "planetary_gear_set",
+    "target": "planetary_mill_base"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "esp32_control_mount",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "argon_manifold_mount",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "label": "nylon insulating bolts",
+    "source": "hv_separator_insulator",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "label": "snap-fit clips",
+    "source": "ui_bezel_mount",
+    "target": "matryoshka_outer_shell"
+  },
+  {
+    "label": "M3 set screws",
+    "source": "thermocouple_sensor_mount",
+    "target": "matryoshka_inner_thermal_chamber"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "stepper_driver_module_mount",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "label": "mount",
+    "source": "matryoshka_outer_shell",
+    "target": "main_power_supply"
+  },
+  {
+    "label": "mount",
+    "source": "matryoshka_inner_thermal_chamber",
+    "target": "induction_heater_module"
+  },
+  {
+    "label": "mount",
+    "source": "planetary_mill_base",
+    "target": "ball_mill_stepper"
+  },
+  {
+    "label": "mount",
+    "source": "esp32_control_mount",
+    "target": "main_controller_esp32"
+  },
+  {
+    "label": "mount",
+    "source": "magnetic_coil_housing",
+    "target": "magnetic_field_h_bridge"
+  },
+  {
+    "label": "mount",
+    "source": "argon_manifold_mount",
+    "target": "argon_solenoid_valve"
+  },
+  {
+    "label": "mount",
+    "source": "hv_separator_insulator",
+    "target": "high_voltage_generator"
+  },
+  {
+    "label": "mount",
+    "source": "ui_bezel_mount",
+    "target": "status_display"
+  },
+  {
+    "label": "mount",
+    "source": "thermocouple_sensor_mount",
+    "target": "thermocouple_sensor"
+  },
+  {
+    "label": "mount",
+    "source": "stepper_driver_module_mount",
+    "target": "stepper_driver_module"
+  },
+  {
+    "label": "internal standoffs",
+    "source": "resonate_particle_chronograph",
+    "target": "em_shielding_enclosure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "em_shielding_enclosure",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "label": "bracket mount",
+    "source": "ultrasonic_driver_array",
+    "target": "resonate_particle_chronograph"
+  },
+  {
+    "label": "concentric clamp",
+    "source": "ionic_steering_coils",
+    "target": "resonate_particle_chronograph"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "ball_mill_stepper",
+    "target": "planetary_mill_base"
+  },
+  {
+    "label": "hardware",
+    "source": "ball_mill_stepper",
+    "target": "chassis_fasteners_m3"
+  },
+  {
+    "label": "M3 bolts and rubber dampeners",
+    "source": "mini_vacuum_pump",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "label": "epoxy seal and bolt-on flange",
+    "source": "vacuum_chamber_port",
+    "target": "matryoshka_outer_shell"
+  },
+  {
+    "label": "threaded fitting",
+    "source": "vacuum_pressure_sensor",
+    "target": "vacuum_chamber_port"
+  },
+  {
+    "label": "M5 through-bolts",
+    "source": "lead_shielding_enclosure",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "label": "contact adhesive",
+    "source": "borated_polyethylene_liner",
+    "target": "lead_shielding_enclosure"
+  },
+  {
+    "label": "M4 machine screws",
+    "source": "accelerator_mount",
+    "target": "matryoshka_inner_thermal_chamber"
+  },
+  {
+    "label": "nylon straps",
+    "source": "mini_electrostatic_accelerator",
+    "target": "accelerator_mount"
+  },
+  {
+    "label": "M3 nylon standoffs",
+    "source": "arcsync_reactor",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "label": "M4 heat-resistant bolts",
+    "source": "coulombus_barrier_chamber",
+    "target": "matryoshka_inner_thermal_chamber"
+  },
+  {
+    "label": "threaded coupling",
+    "source": "coulombus_barrier_chamber",
+    "target": "isotropic_field_core"
+  },
+  {
+    "label": "M3 nylon standoffs",
+    "source": "sic_h_bridge_pro",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "label": "Heavy duty zip ties",
+    "source": "resonance_capacitor_bank",
+    "target": "tesseract_outer_frame"
+  },
+  {
+    "source": "vibranium_alloy_chassis",
+    "target": "tesseract_outer_frame",
+    "label": "M6 Grade 8 bolts"
+  },
+  {
+    "source": "ln2_cooling_jacket",
+    "target": "vibranium_alloy_chassis",
+    "label": "thermal interface epoxy"
+  },
+  {
+    "source": "toroidal_flux_sensors",
+    "target": "vibranium_alloy_chassis",
+    "label": "press-fit"
+  },
+  {
+    "source": "neural_matrix_controller",
+    "target": "esp32_control_mount",
+    "label": "M3 nylon standoffs"
+  },
+  {
+    "source": "arcsync_reactor",
+    "target": "vibranium_alloy_chassis",
+    "label": "concentric alignment pins"
+  },
+  {
+    "source": "spacetime_metric_modulator",
+    "target": "tesseract_outer_frame",
+    "label": "rack mount brackets"
+  },
+  {
+    "source": "degenerate_stabilizer_coils",
+    "target": "vibranium_alloy_chassis",
+    "label": "thermally conductive epoxy"
+  },
+  {
+    "source": "quantum_state_interferometer",
+    "target": "vibranium_alloy_chassis",
+    "label": "optical flange mount"
+  },
+  {
+    "source": "high_temp_ceramic_standoffs",
+    "target": "isotropic_field_core",
+    "label": "M3 threaded fit"
+  },
+  {
+    "source": "high_temp_ceramic_standoffs",
+    "target": "vibranium_alloy_chassis",
+    "label": "M3 socket screws"
+  },
+  {
+    "source": "high_current_ion_source",
+    "target": "mini_electrostatic_accelerator",
+    "label": "KF25 vacuum flange"
+  },
+  {
+    "source": "feedstock_injector",
+    "target": "arcsync_reactor",
+    "label": "threaded NPT 1/8 port"
+  },
+  {
+    "source": "precision_timing_module",
+    "target": "esp32_control_mount",
+    "label": "M2 nylon standoffs"
+  },
+  {
+    "source": "high_power_rf_amplifier",
+    "target": "vibranium_alloy_chassis",
+    "label": "Thermal adhesive and M4 bolts"
+  },
+  {
+    "source": "phase_locked_loop_controller",
+    "target": "esp32_control_mount",
+    "label": "M2.5 standoffs"
+  },
+  {
+    "source": "gev_multiplier_stack",
+    "target": "vibranium_alloy_chassis",
+    "label": "ceramic standoff arrays"
+  },
+  {
+    "source": "cf252_feedstock",
+    "target": "high_current_ion_source",
+    "label": "hermetic containment sleeve"
+  },
+  {
+    "source": "lead_glass_viewport",
+    "target": "vibranium_alloy_chassis",
+    "label": "compression flange and lead gaskets"
+  },
+  {
+    "source": "radiation_monitor_geiger",
+    "target": "tesseract_outer_frame",
+    "label": "M3 nylon standoffs"
+  },
+  {
+    "source": "cf252_feedstock",
+    "target": "high_current_ion_source",
+    "label": "hermetic containment sleeve"
+  }
+]

@@ -1,0 +1,3902 @@
+{
+  "plan": "- High-temperature induction heating furnace with programmable MCU (ESP32) for precise thermal ramp control.\n- Multi-stage precision planetary ball mill for mechanical alloying and particle size reduction of natural precursor minerals.\n- High-voltage electrostatic separator to isolate pigments with specific refractory wavelengths.\n- Custom 3D-printed enclosure with a modular matryoshka layout to house nested processing chambers.\n- Tesseract-frame internal support structure made from carbon-fiber reinforced filaments to withstand mechanical stress.\n- Digital flow-control valves for argon-gas shielding to prevent pigment oxidation during the refractory cycle.",
+  "nodes": [
+    {
+      "id": "main_controller_esp32",
+      "name": "Main System Controller",
+      "pins": [
+        "EN",
+        "VP",
+        "VN",
+        "D34",
+        "D35",
+        "D32",
+        "D33",
+        "D25",
+        "D26",
+        "D27",
+        "D14",
+        "D12",
+        "D13",
+        "GND",
+        "VCC",
+        "D23",
+        "D22",
+        "TX0",
+        "RX0",
+        "D21",
+        "D19",
+        "D18",
+        "D5",
+        "D17",
+        "D16",
+        "D4",
+        "D2",
+        "D15",
+        "SDA",
+        "SCL",
+        "SCK",
+        "MISO",
+        "MOSI"
+      ],
+      "type": "mcu",
+      "partId": "abab37bb-d5cc-4e9b-99cb-fdb29eb128c9",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ESP32-WROOM-32D+Development+Board&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51FVGNau+6L._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "Type",
+            "value": "Transceiver; 802.11 b/g/n (Wi-Fi, WiFi, WLAN), Bluetooth® Smart Ready 4.x Dual Mode (BLE)"
+          },
+          {
+            "label": "pins",
+            "value": "GPIO16,GPIO17,GPIO18,GPIO19,GPIO21,GPIO22,GPIO23,GPIO25,GPIO26,GPIO27,3V3,5V,GND"
+          },
+          {
+            "label": "Contents",
+            "value": "Board(s)"
+          },
+          {
+            "label": "Frequency",
+            "value": "2.4GHz"
+          },
+          {
+            "label": "Antenna Type",
+            "value": "-"
+          },
+          {
+            "label": "Utilized IC / Part",
+            "value": "ESP-WROOM-32"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://octopart.com/opatz8j6/a1?t=ePsjLvAuojODMNhezk47AGP9BN6V16YdpEnzObMuMc2-aVTtYhAVgCo-kih48s4p75fvLzWiZkMJ2sxT-frapKvD4bEaGqs9faJcNnuGHHoyxidhawPj79rQVXp-LZqUfgXxAXbHs4IIlThHwILz9WCOt5STv2HQnFVfHqnZXgGSe5uRBcPe3RnhTSPKrwuQ9_h0naYdgbdNs6ewmffOT_IAT5J11WkAzGiCjl8ZBkiaHsUUyCqz2l-9iaYie-bjjCO4_as1umcWkvTUgPNRfLba2wQwQQ",
+            "price": "$9.1543",
+            "vendor": "Worldway Electronics"
+          },
+          {
+            "url": "https://octopart.com/opatz8j6/a1?t=hVdyxVRxQM_ddlw41p6cCwLvhLTnaBV3_RIQ1EjoOAY_85NXfNdTKcxsEfQGlxpmup8Sk0cJ7220T1xEqRJOi_2fksBCNpawYN9TK_qNGE-v3zhKvEucjfwlScB7pbMtQwtFBRETZ5Eruur9AJh9XlRvtCkyDExU3bmsgdwNqEd63z24OEun82BYEDLcJnoDgpQymRDwMYfnpf8wS-Ps_igJg0Vz2soC-FOydyvlD3X_Hu6iU3fQLisBjoc2D-dUDxYNLpVpBapj24MpRGU8t0akwNc2dw",
+            "price": "$14.638113",
+            "vendor": "AAA CHIPS"
+          },
+          {
+            "url": "https://octopart.com/opatz8j6/a1?t=vG1cynGDamgHh7cbgodNdCZmiogbDjXGlFOTWfQLV82Ijl3wKII4n6sN2820lMgrdKltP_IdmBlhnjI6psff5JTJLagNaMve4lP_AZmB9ZSAtyGdyn8Phs3JOPpBdUecdrghBTtMOGgEou68Y3H7DG_cetjAwgCHJmN_3PQzg1Z4GY0L_4Tx0libq2H1bZ5pLHORx2q_1tV2HZcopVMP6wCDUnv0U1AJZ7kZ8qRE4IsvI90Z1a6jr78y2WFnVJo27jXuR-ducGgJQWK-09YYF02Gp_gU7g",
+            "price": "$19",
+            "vendor": "Chipsmall Limited"
+          },
+          {
+            "url": "https://octopart.com/opatz8j6/a1?t=KMgJv6a00w9WTOw84AceGVdRjE95IovHa9Nu-BqK2WjV6fj8FkJZKVGQJh6XezQKFphTPA_jAmjCT6xUwlk3jv2dg56Jqs19VbJ3zGwZ0JqyLfQvYUTLFGJ1bnLMlyMQeEFZ59xx5I4yZtqmc6X8TtXkGRov_-wv-jmUVzi1F-bk7vcbweFY9SNtroqB31zEPbmNKoULfpfj0x2rlrkEdT41HILKiVV46a-98RYXxGIZtu08ma7bc9QTHf7iYNivJR5_aKK4GN5ZiKP2KVs_j0mnkh7BaQ",
+            "price": "$10.4644",
+            "vendor": "Run Hong Electronics"
+          },
+          {
+            "url": "https://www.adafruit.com/product/5029",
+            "price": "$18.5",
+            "vendor": "Adafruit"
+          },
+          {
+            "url": "https://www.digikey.com/en/products/detail/espressif-systems/ESP32-DEVKITC-32D/9356990",
+            "price": "$15",
+            "vendor": "DigiKey"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B08D5ZD528?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$16.79",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005007096886808.html?pdp_npi=6%40dis%21USD%2111.25%215.62%21%21%2176.30%2138.15%21%40214114e317793253327663220e1277%2112000057697399037%21affd%21%21%21%211%210%21",
+            "price": "$5.62",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CR5Y2JVD?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$16.59",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B08M5Q1DZF?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$17.99",
+            "vendor": "Amazon"
+          }
+        ],
+        "datasheetUrl": "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf"
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B08D5ZD528?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "48x28x12mm",
+      "position3d": {
+        "x": 120,
+        "y": 30,
+        "z": -120
+      },
+      "boundingBox": {
+        "width": 48,
+        "height": 12,
+        "depth": 28
+      },
+      "description": "EVAL BOARD FOR ESP-WROOM-32",
+      "productName": "ESP32-WROOM-32D Development Board",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=ESP32-WROOM-32D",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxR6vbyXY2ppL9ObRmYh4w4AK032f6bBm9NDrp62dnlrDQlnlop8wQc5bP4qXfeJ276Yek60BQaZDYxId5Ukphk7sJJODgS1isRhZwKXDxwwiDFyENTPU35PqQK8lkODm1HaTad4RY4cP1wl45WTeh4RlPsVUHy4VlZIc1wB2PtjlQuLRD9hen7MaRbZW4t6zXUfC9bGHFbOF2gFiVJefzCXxYaTVzAVLAUvLSHkbqyQnqrFk1uqwOrOEbNP1LnoiHms9bNBTW9BnmuZ44dVxgrvfnPRrtF1DzjkV2MH7aZGrCLMYBexygMLfan7wIJiUJp4eIOAU63ETQxHQnhQQvMDIqXUQpIHv7ZeJ0RbYR4h6ZSCgjbqlf53uzTimPSlFbe9eC1rCOfbX7oPNipLwACODeOTiaCIO3enuw0oxwosWlviDGwFcQqVRTXhsNeyocPqKgRBrbSMdVuP2Ge1Q2IaEEkhh50Eg8BKvlCGSy32SrGjbmQcul0fMiQX1jWAuMkblVsvgxVG3UGecyBxwSKIQHPNhkDKAt2fnBrwReTsvwTT4maM3YA81857bt5dxvTzGWY6rbUnKbimW7cicOckKZZCq98HTyBfP4F2eHEUDXULYIyGjYr3bIldY9Oj4JLz05rZ5bvXrjNOlBdrQhrjV",
+      "estimatedCost": 8.5
+    },
+    {
+      "id": "induction_heater_module",
+      "name": "Miniature Induction Heater",
+      "pins": [
+        "V+",
+        "V-",
+        "COIL_A",
+        "COIL_B"
+      ],
+      "type": "actuator",
+      "partId": "945708ba-628c-4e08-8c12-1749f8e9b8be",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ZVS+120W+Induction+Heating+Board&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41n4R3+jycL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0BBPN257N?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$36.89",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005006866465032.html?pdp_npi=6%40dis%21USD%219.24%219.24%21%21%2162.49%2162.49%21%40212a7b8d17795915866181015e0ef0%2112000038560558016%21affd%21%21%21%211%210%21",
+            "price": "$9.24",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CNCRQY8G?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$41.99",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0BBPN257N?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "55x40x35mm",
+      "position3d": {
+        "x": 0,
+        "y": 100,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 55,
+        "height": 40,
+        "depth": 35
+      },
+      "productName": "ZVS 120W Induction Heating Board",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxHyHDtl8FDHReDUgMk2GyvtoHEZWoPXcOac7zgFISjlO7mJu7d4vUyuCcFbbQCm6IOTJw6F0ducrvmtpX9vCeahxonrZk4ZROTz0ptMQsx3Oubity5VtgDAPKcpxaGKYgbaXVNAWQjBaMq2eo6jacuwdB7c6X9T8uNV2AQfSdvo3Z6fJbtowvHMIre5hMyWWAkLxqKFXEuHt8Mio7a8cOOtI5XCO7M7UZYgHCEFWoaB4ZIjjqs2AqS7dxWSrHo8yVNl05tj9uDY72QYocofIA6qo6DPx6NFTa42uSNKuVc8aMZp6OVJ2DEvFnVUSVgPQ6jxkrWk6n4ObEHL13YRxz8dwnzb1wKLSGYzMmstecYEsDknPN63TP5ZfG8UJsDiYVCG3gyVr3oG0f1P7VBpThHS5yzFak2dMHTqeBkM0qMXwLUEMMHqnKPfUvx8RPgVeYzHPdcZNh2WvdNvV8ZGLK1wYPC5IxdCrqC81bMlkppMrOLdDtlXHVUfRzXUtRDeO7zhu3I8BljcSD4z1PiCngfp3A5ZyNDdgTpxfK22ZQgWoAhX8aZdabWtkOHWHqmkarzyYkI29bBDAEXcxNE1W09bvMR1rXWzUhMfyByzNwG8hWwqEAwVBVQSN8CLv4jXUXNCrufYi8DO7iNqJ3H89HlK7",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxHyHDtl8FDHReDUgMk2GyvtoHEZWoPXcOac7zgFISjlO7mJu7d4vUyuCcFbbQCm6IOTJw6F0ducrvmtpX9vCeahxonrZk4ZROTz0ptMQsx3Oubity5VtgDAPKcpxaGKYgbaXVNAWQjBaMq2eo6jacuwdB7c6X9T8uNV2AQfSdvo3Z6fJbtowvHMIre5hMyWWAkLxqKFXEuHt8Mio7a8cOOtI5XCO7M7UZYgHCEFWoaB4ZIjjqs2AqS7dxWSrHo8yVNl05tj9uDY72QYocofIA6qo6DPx6NFTa42uSNKuVc8aMZp6OVJ2DEvFnVUSVgPQ6jxkrWk6n4ObEHL13YRxz8dwnzb1wKLSGYzMmstecYEsDknPN63TP5ZfG8UJsDiYVCG3gyVr3oG0f1P7VBpThHS5yzFak2dMHTqeBkM0qMXwLUEMMHqnKPfUvx8RPgVeYzHPdcZNh2WvdNvV8ZGLK1wYPC5IxdCrqC81bMlkppMrOLdDtlXHVUfRzXUtRDeO7zhu3I8BljcSD4z1PiCngfp3A5ZyNDdgTpxfK22ZQgWoAhX8aZdabWtkOHWHqmkarzyYkI29bBDAEXcxNE1W09bvMR1rXWzUhMfyByzNwG8hWwqEAwVBVQSN8CLv4jXUXNCrufYi8DO7iNqJ3H89HlK7",
+      "estimatedCost": 15
+    },
+    {
+      "id": "high_voltage_generator",
+      "name": "Electrostatic Separator Source",
+      "pins": [
+        "V_IN+",
+        "V_IN-",
+        "HV_OUT+",
+        "HV_OUT-"
+      ],
+      "type": "module",
+      "partId": "435c32d4-f61f-4346-9b07-f55ec221474c",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=400kV+High+Voltage+Pulse+Generator&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41OySeu6PTL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0F2FHJRGG?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$6.88",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005010537578985.html?pdp_npi=6%40dis%21USD%2110.60%215.30%21%21%2171.36%2135.68%21%4021013cc617801609886763365e0fdb%2112000052743544937%21affd%21%21%21%211%210%21",
+            "price": "$5.3",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B09L18GG2Z?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$6.99",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0F2FHJRGG?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "65x24x22mm",
+      "position3d": {
+        "x": -150,
+        "y": 300,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 65,
+        "height": 22,
+        "depth": 24
+      },
+      "productName": "400kV High Voltage Pulse Generator",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxgoqYqcZivncxdsDf1uGi2zFPMiZpXNoTLkruIlUtip1ERyj3dCz5Tq5qezljiwWX7tPCeZKqH42W3WFqfMs5yr3VmLhOcWqgsdDbIdvz6ZsqHh3GnSeUxAfaLTt9vr5rTSlp33vrQjCqb0FN3lmyiGxWqq7MhRIcurU0gB0RnNgkyInSusLp5qCAtMSM1iXq0bn29Fvjc98eTPPZlH8WsJjJTqLDGGp8KNQEVRRjuOMDMSgaGt3aiSpqAw3Biy4FQ2OgRGbALnOpYjw2fqF6LsSFVcB2v51vug7pKdCgcDp93WgFqTtHHd8rvEtjNzyj1Qhdu9IxusvxKJbR0KvDeeop3T3g0ozKMogLVOpOn4yw6haoZpwda2o3kxD1UYLtzmauuL41W9g134ssRtIEfi9og9u3o0BKSVQg5qMO9HMoaUrLUSRSP4m50fto9FX0ColZtiQp1h8DB6XreBbwCGUw7t3RzjD1FKZQaMYy7GU4LDg2l0Chjru8kmB9DR4WR50J5iTAIPIEk3amqqtWkhtTUQrdUzwHnqvNehB8A1W8Fy7fRXGq2tLbiovy0SmENGIDm8sdGOHPTgR1jVkgJAkclPMurYsQJOPl0JIxN1L4UcFKPa1250MqsLcMNyF94uIPMSL1KJTMnelFrz8pIqn",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxgoqYqcZivncxdsDf1uGi2zFPMiZpXNoTLkruIlUtip1ERyj3dCz5Tq5qezljiwWX7tPCeZKqH42W3WFqfMs5yr3VmLhOcWqgsdDbIdvz6ZsqHh3GnSeUxAfaLTt9vr5rTSlp33vrQjCqb0FN3lmyiGxWqq7MhRIcurU0gB0RnNgkyInSusLp5qCAtMSM1iXq0bn29Fvjc98eTPPZlH8WsJjJTqLDGGp8KNQEVRRjuOMDMSgaGt3aiSpqAw3Biy4FQ2OgRGbALnOpYjw2fqF6LsSFVcB2v51vug7pKdCgcDp93WgFqTtHHd8rvEtjNzyj1Qhdu9IxusvxKJbR0KvDeeop3T3g0ozKMogLVOpOn4yw6haoZpwda2o3kxD1UYLtzmauuL41W9g134ssRtIEfi9og9u3o0BKSVQg5qMO9HMoaUrLUSRSP4m50fto9FX0ColZtiQp1h8DB6XreBbwCGUw7t3RzjD1FKZQaMYy7GU4LDg2l0Chjru8kmB9DR4WR50J5iTAIPIEk3amqqtWkhtTUQrdUzwHnqvNehB8A1W8Fy7fRXGq2tLbiovy0SmENGIDm8sdGOHPTgR1jVkgJAkclPMurYsQJOPl0JIxN1L4UcFKPa1250MqsLcMNyF94uIPMSL1KJTMnelFrz8pIqn",
+      "estimatedCost": 12
+    },
+    {
+      "id": "thermocouple_sensor",
+      "name": "Crucible Temperature Sensor",
+      "pins": [
+        "VCC",
+        "GND",
+        "SCK",
+        "CS",
+        "SO",
+        "T+",
+        "T-",
+        "MOSI"
+      ],
+      "type": "sensor",
+      "partId": "957862a2-4ea5-4a52-861c-f44f54368001",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=MAX31855+K-Type+Thermocouple+Amplifier&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51NHLpFvYkL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0CD84KS77?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$11.92",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0FTFQSP45?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$7.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1902975189.html?pdp_npi=6%40dis%21USD%211.19%211.19%21%21%211.19%211.19%21%402141149b17795507794738307e0fa7%2112000018875273580%21affd%21%21%21%211%210%21",
+            "price": "$1.19",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CNXHQFWX?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$13.81",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0CD84KS77?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "20x20x3mm",
+      "position3d": {
+        "x": 0,
+        "y": 170,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 20,
+        "height": 3,
+        "depth": 20
+      },
+      "description": "Monitors temperature inside the sealed, heated chamber.",
+      "productName": "MAX31855 K-Type Thermocouple Amplifier",
+      "purchaseUrl": "https://www.adafruit.com/product/264",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/2YgDK2cRCyl9WNkj7vsiSgwQncOI32ZVsrEzbicWkRKbFTNMQbqbkcFOG1OBsMpz0QZ56yDUfJ22csduZdiHbgpEF7Ex3UKlAchlGNBsOXNNF88rwsDtIBwGctERXF9F8Kr7I88X0k96g6ZMhkO3P6ToLVxDdHRMGJpxZpIjxnmHAvyJtyadmk38EGe6i2o8G7iaV7tYZArmhfSTEi2pVyWdpS5Ka22Bg1szqfWcQUeNEjawjvRvXvFLTCW8qblr7wOZUa4C5MI6y0qLQDHLWOVtAJdfQPdkObHrhQOnLbHFca3adkBrPsRlqiivBeWPgsOsnS7zZOkXsjvsjkpI4nujMTZnG6PjHFJYrbe6DbQkaYDXPADNbaDxrVBwrtvkreFHDMi10Nuy29ZDFnpiE2VmKAWEwBdTuuhwXEebhisv3dCu4CqYg1m2jwionS0TPTDOR2VliiWTzCPspV0GfBed0dfPjgW7x96gYprs1a7d1KXAQHYlML1Y1TyZjKzBW6kZXbxXjdo4VGfSfnfsa6kINZ7MftKPdStY4Y7TqBcfqyEHvOSR3tjaBY16ABQt5O0PT8f0OqL1lfL06r28W1qBFfTXTqDoAyaxs1wejHshbkZUb9Y47dwEaPaNFXKGj2JdJYd8jgOmOCMRGPMHBVawdgRiQsTrG793uFpHg1yOfhTXbqimBoji3r9javvN74yEDRuqupiyxEBLiqKwlF3MDd3xBNzZLaPnheJb82oZFhJJJSm3IO85r9jePFVfgCwjvhaV0jMvA7dpHVo2zSp6M4cmdXYzUY3Qn4Otk39VFTjeWIYpmn2B2Uu7dLJ35bWVChQRMH31YmjRfesGt7xOPEXVfTh9aIvm6d1VfgWijTKnSslQ2TeuLLFEWRNj2RB1fPK2Fnlw1wTebebO9bwCeyoHWp2OjIaow7RkFoR9UrCS6s",
+      "estimatedCost": 14.95
+    },
+    {
+      "id": "argon_solenoid_valve",
+      "name": "Argon Gas Flow Valve",
+      "pins": [
+        "POS",
+        "NEG"
+      ],
+      "type": "actuator",
+      "partId": "341c4d19-8123-493a-a359-12160589d388",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=12V+DC+Electric+Solenoid+Valve+1%2F4+inch&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41d4sKwAZpL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B00APDNPXG?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$20.19",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B00APDNPXG?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "64x30x45mm",
+      "position3d": {
+        "x": -120,
+        "y": 50,
+        "z": 100
+      },
+      "boundingBox": {
+        "width": 64,
+        "height": 45,
+        "depth": 30
+      },
+      "productName": "12V DC Electric Solenoid Valve 1/4 inch",
+      "purchaseUrl": "https://www.amazon.com/dp/B00APDNPXG?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxIbIba8Q180BiM8G4FXByASkOAQVBciRRrC2zm3laNCm6O3piythQOrb1Z4BAZCWM83Ec7oe22uqcOpPNNJLJxNBhsxLXBMzcf82vUZuZG4O9sLzllqTpLqX3yBkN83P3mJmxqMhfP3ie21OK23lhiExAVWc0WuSzJiXhKoBa9YQWi4nslxFYHYL9M8Z7rfM9T0ZUF9KYdU0f6n6oYLxGDYerLpkVThBgh1ODjgi1qf5gZf7O2TPxoYzZNrdAmQpJIIDjqsriuLHqB5vefPwpJeH9FsasYfDHpl0eCwssl2oRT43hc4HNr2yDcNFXFlmHB8UQ8H8gCXcxJj7up3GVQj0HfOVWUIHVJSpOe7Zwzw0vOQQBuvBY0yn0TLdjo3CDeEooWk6Febs1LRfQM4JyclnPyQqsgumpA0RVSxil5HRU3jKrjd5SP6LsDxP1U4XLSoSzVfsMhJI7ELJavgNwYeCZppBBf81mH6Xy1Qi7bR6rfq9LUdSmbT8QZK1pFKTqtvOaV3HLSLw0KApDFngDlapDksv4GxnCzyJ3XYtLYgJdo0crSHHoO8e8yq6tOq8WQ0NEKTfmstVdlZyRn2fbsRXcDkaDdEUIlCPDfaq0nHDi8D0jgPgQnkvOWw552mUq3EmyVUZFrhQbKPGeqLZ8V5t",
+      "estimatedCost": 11.5
+    },
+    {
+      "id": "ball_mill_stepper",
+      "name": "Planetary Mill Drive",
+      "pins": [
+        "A+",
+        "A-",
+        "B+",
+        "B-"
+      ],
+      "type": "actuator",
+      "partId": "128a9736-8515-4ca3-be91-d3e0ec4d9cc6",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=NEMA+17+Stepper+Motor+1.7A&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/31afz5x6urL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/item/33023193026.html?pdp_npi=6%40dis%21USD%214.10%212.95%21%21%214.10%212.95%21%4021013cc617794235748544746e102d%2112000039947733304%21affd%21%21%21%211%210%21",
+            "price": "$2.95",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0FP1SNT6V?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$12.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0FP1QQ1NT?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$12.99",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0FP1SNT6V?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "42x42x40mm",
+      "position3d": {
+        "x": 0,
+        "y": -20,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 42,
+        "height": 40,
+        "depth": 42
+      },
+      "description": "Provides rotational motion for the fifth joint of the robot arm.",
+      "productName": "NEMA 17 Stepper Motor 1.7A",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=NEMA+17+stepper",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/2YgDK2cRCyl9WNkj7vsiSgwQncOI32ZVsrEzbicWkRKbFTNMQbqbkcFOG1OBsMpz0QZ56yDUfJ22csduZdiHbgpEF7Ex3UKlAchlGNBsOXNNF88rwsDtIBwGctERXF9F8Kr7I88X0k96g6ZMhkO3P6ToLVxDdHRMGJpxZpIjxnmHAvyJtyadmk38EGe6i2o8G7iaV7tYZArmhfSTEi2pVyWdpS5Ka22Bg1szqfWcQUeNEjawjvRvXvFLTCW8qblr7wOZUa4C5MI6y0qLQDHLWOVtAJdfQPdW0g44dzekw056SMCWWsNIxQB5fvRttOOIdXbXNGEY0rYTpq4CqaizlHhypJOz5OsMRWWTp8RNSMmax13iatVLHNOnrTx6Xi0CwgA9Ao8DzS6zXIIFto9wrfpbTIpSQTIsL9wFA3oBsgdUp5Bc8m692IRv3JfZWJjzqup6TqwgywtZKEJsIM3DRRgeprBVtBHlss1xMH2CsFZpCiTQTrFl5ouwCuSDGk1jajDlmrhdT4wln8imO05fS5hyqQDK2QCOKfB8chbwI5zqkkM3iTegWbqudTsUajcd4Fk8HkCxy3iqvk0Py4VVlP2kf0Hj98luAnuRCVPy30eOX8Kcjqw0gNAukSx83QLB5cXm4pS96dE2xvqcCMm96tq8FK7VKgPGtzlCNs5U5KbP6OpHbGxIJwDs6zC6CxPMD67Dpn7ydWw9UP09GNrbYKlAsYNHWFTEIWCh0JxrRu4VYWnJwf5Yh6IjIjW8xv5YoYP333blfYJEzgbFxC9kIWxOo0apjAeQr598tRwMbndQ4XndEfPjnBK7ZYHENMcQz0PbDj2h1VjruAakTcOpIw9dDuzMj8673IlGMpEvJZUR8CWPe5dKVaLsEP2p9dNN3SBDiIBcdEjCXg5u0eqj3qJr7JmQJY4WI4owWRdHQPNG9QbuyY",
+      "estimatedCost": 14
+    },
+    {
+      "id": "stepper_driver_module",
+      "name": "Mill Motor Driver",
+      "pins": [
+        "ENABLE",
+        "MS1",
+        "MS2",
+        "MS3",
+        "RESET",
+        "SLEEP",
+        "STEP",
+        "DIR",
+        "VMOT",
+        "GND",
+        "VCC",
+        "1A",
+        "1B",
+        "2A",
+        "2B"
+      ],
+      "type": "module",
+      "partId": "b1b33a2a-4a09-4f62-8214-89dcf0a899e4",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=A4988+Stepper+Motor+Driver+Carrier&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://cdn-shop.adafruit.com/product-videos/640x480/6109-07.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/item/1005009089776685.html?pdp_npi=6%40dis%21USD%214.73%214.53%21%21%2131.97%2130.62%21%400b8ded7b17794403919464668e120e%2112000047874178717%21affd%21%21%21%211%210%21",
+            "price": "$4.53",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B07BND65C8?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$10.19",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.adafruit.com/product/6109",
+            "price": "$6.95",
+            "vendor": "Adafruit"
+          }
+        ],
+        "documentationUrls": [
+          {
+            "url": "https://www.adafruit.com/product/6109",
+            "title": "Product Page (Adafruit)"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B07BND65C8?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "20x15x11mm",
+      "position3d": {
+        "x": -120,
+        "y": 30,
+        "z": -120
+      },
+      "boundingBox": {
+        "width": 20,
+        "height": 11,
+        "depth": 15
+      },
+      "productName": "A4988 Stepper Motor Driver Carrier",
+      "purchaseUrl": "https://www.pololu.com/product/1182",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxwPHaSYxMlxkzMDh8qqHVpxnUsNZCYqKeVcaQyKN4gFDNb9o3B8oAVcB1DMv1BQ1sLwrOVYhkLFcfACEMI7vaPIlUxfvLzzOhliUglrwMo8zJNp1xDAP0GzZSz9n5DM6pJsahd3XloSquMXJD1OMOPY8NxMXf77yS8BJ8yqyFLAkKts1AH153XzG8SlcX8AzcxPCNH0Vpg1nnhG7lmHXNEiOtZOO6ExQKrcpv4FbQFw8bpkPMSrV1imsU9iJoB83evvOKSAJsG5evojb41WKsaDKqLTQaCBzHp4st8kmI38BkkLbXk88vR0vZ7OAvHIepD3v2DrKZHm2fQkVpksZk9NOoq6nwFxr116hQoIY4p2MhsJNrC17r5tM2XTMAsxNep5PkN02j5oGpxkYhNGaAysSxi9xqF54KkQyMOrBecgche7KuDmg6jCoMatjo5RP8CNr2Golk3cvPQlyO0zesRCrFhdSadxmlr97O5DTeg3DGu3UxRmvMSpinE8MircIc9Kkps3woJ4pTGSf0jB9UVKRO4ZfGTPpFYWeV8HXJcRMdlJl16fwzYP5TKWTOlp44jge972ldzv7oR1cPh1wabcdgHkHqEOhItoXKyN42mlgMI92Qra0NyOh3aYE0BlTNWp12TyVw3RSpsXttN9fO7W3",
+      "estimatedCost": 5.95
+    },
+    {
+      "id": "status_display",
+      "name": "System UI Display",
+      "pins": [
+        "VCC",
+        "GND",
+        "SCL",
+        "SDA"
+      ],
+      "type": "display",
+      "partId": "77b2305d-bfb7-464a-aa02-3de5730af3ed",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=1.3+inch+OLED+Display+I2C+SH1106&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://ae-pic-a1.aliexpress-media.com/kf/S3f7a0f3880314703becef550558c3cf7q.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0C3L7N917?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$17.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005006862867338.html?pdp_npi=6%40dis%21USD%218.76%214.29%21%21%2159.22%2129.02%21%402140f89017828541844305897e1269%2112000038550917700%21affd%21%21%21%211%210%21",
+            "price": "$4.29",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0C3L7N917?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "35x33x4mm",
+      "position3d": {
+        "x": 0,
+        "y": 355,
+        "z": 155
+      },
+      "boundingBox": {
+        "width": 35,
+        "height": 4,
+        "depth": 33
+      },
+      "productName": "1.3 inch OLED Display I2C SH1106",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxR52Ry9KwONAG8dFOMg4vEMwlGC78eTXkXDg441gLTfppuH3q4DmdzwsinDn5E0bl61opnMbkEh5eEJZ23pMaDjbF3BbLAGOCf8LXi1VhxsqXWJQtfGcwLsjApqMkXNpviFYd7InbE8ElYwtHEOwTCo3CaxoJ01rqeNi9d01VeQwd5fIUXvmj3K0Gu6JlBJdluKjcsqY2iqMA4jqakgUzbd4uJModqfdPjkfJ2uET9pj8sI5D1ebZUkgIjvPnGtzHOA357f1NjweS7HJmluaKnq4AN1rO3Pq6rqgOTAdQr2vpPCL94zNAOm2IYKwt1RaIIsftxG8ufQ4rJBIWjQB2HKsnsqCpz3KvxjVgr29fXpcVdTmHRqNMANSS7Ep65idsA1mqGbxbUErXyWcVB7s77YYcqVtHD9I4Qklj29HZAQszDCUFEYHFqmba4kZBQ3X7VuuVNVUFLeVQHf1WCH8xoi29D4Qo92XX9XYQ9gCtCtXu2BQwOjxUiVwXmtI76oe2LhFWj9snJK1ZFAm4suhOqEWHDgNeBaHBuZjm3z6SUG0JGCZi0bfN4UuXfa7lzxiv8ljtYzjcRxE6uiSpauEuVTXfSrRQ5iVT4yS94TlKP1avvhXKfPq9k6uzzgny0QLzbxn1IPwyyba7EXR0jZiUgnp",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxR52Ry9KwONAG8dFOMg4vEMwlGC78eTXkXDg441gLTfppuH3q4DmdzwsinDn5E0bl61opnMbkEh5eEJZ23pMaDjbF3BbLAGOCf8LXi1VhxsqXWJQtfGcwLsjApqMkXNpviFYd7InbE8ElYwtHEOwTCo3CaxoJ01rqeNi9d01VeQwd5fIUXvmj3K0Gu6JlBJdluKjcsqY2iqMA4jqakgUzbd4uJModqfdPjkfJ2uET9pj8sI5D1ebZUkgIjvPnGtzHOA357f1NjweS7HJmluaKnq4AN1rO3Pq6rqgOTAdQr2vpPCL94zNAOm2IYKwt1RaIIsftxG8ufQ4rJBIWjQB2HKsnsqCpz3KvxjVgr29fXpcVdTmHRqNMANSS7Ep65idsA1mqGbxbUErXyWcVB7s77YYcqVtHD9I4Qklj29HZAQszDCUFEYHFqmba4kZBQ3X7VuuVNVUFLeVQHf1WCH8xoi29D4Qo92XX9XYQ9gCtCtXu2BQwOjxUiVwXmtI76oe2LhFWj9snJK1ZFAm4suhOqEWHDgNeBaHBuZjm3z6SUG0JGCZi0bfN4UuXfa7lzxiv8ljtYzjcRxE6uiSpauEuVTXfSrRQ5iVT4yS94TlKP1avvhXKfPq9k6uzzgny0QLzbxn1IPwyyba7EXR0jZiUgnp",
+      "estimatedCost": 8.9
+    },
+    {
+      "id": "main_power_supply",
+      "name": "System Power Regulator",
+      "pins": [
+        "L",
+        "N",
+        "G",
+        "V+",
+        "V+",
+        "V-",
+        "V-"
+      ],
+      "type": "power",
+      "partId": "58356061-b2fc-41d0-ac6c-55266ac50808",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=24V+10A+DC+Switching+Power+Supply&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://cdn-shop.adafruit.com/640x480/658-07.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "AC_IN_L,AC_IN_N,AC_IN_GND,DC_OUT_+,DC_OUT_-"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B078RYWZMH?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$22.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005007170739093.html?pdp_npi=6%40dis%21USD%2111.84%215.56%21%21%2180.06%2137.63%21%402151fd2c17793988578122688e0f0f%2112000039689312371%21affd%21%21%21%211%210%21",
+            "price": "$5.56",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.adafruit.com/product/658",
+            "price": "$29.95",
+            "vendor": "Adafruit"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0BZVPWTB3?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$18.98",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0D5B33JCH?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$29.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CDB8MMRF?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$33.99",
+            "vendor": "Amazon"
+          }
+        ],
+        "documentationUrls": [
+          {
+            "url": "https://www.adafruit.com/product/658",
+            "title": "Product Page (Adafruit)"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B078RYWZMH?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "199x98x42mm",
+      "position3d": {
+        "x": 0,
+        "y": 21,
+        "z": 140
+      },
+      "boundingBox": {
+        "width": 199,
+        "height": 42,
+        "depth": 98
+      },
+      "description": "Main power supply for motors, heaters, and 24V modules.",
+      "productName": "24V 10A DC Switching Power Supply",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxInyY37P20yTrhBCsT5iEq1XCeOpn7eLNIbCg9T9VJxoYMt9E6xgqQWXLhUWrU0xP9j2tvHHMRCXGmKrQyLkAwzUM7sivYRCABcs8pTiz4TaHk0pcDgQTGmkb7lBbPIlMCEZpFczsKygP9gt4UgVmciLmlIle1LJNhDnhazrH77L9zMfUpyXTogeI6s5jdxebPdBItmByKuoSAdlAYRoZVFFnoeOh9NkK7JNiTrgTws9dE6hf0dxuW1HDAha7jlPdeUM6O3m3WCfPbvgMWV5cBZ0dlsopoDIXU8yAh8i8MYuDyldsR5cPkziDaFcYherL38PpBD6qKu2dj7KK1KTcMXVJtYEV86kkkUsTxP5FkW3P31pjsFEzsgbVNnkOg6ETq9J792HGuuY7GY1nR4YzIMmBIaYmOTJWP1cJfmjNTsrQJFSaQ41duUr7kFVDcjNggyab8HPObKq6nm9dEMpjBIOcu4c3T1UYRe8DwXE60WXOWvEQEnaI9ZkrlspXEK2sU2jNe76dR2DRP7GlPv1PpHjf3k1T6uwIu7nLGnCsTIanOQOUmtSLjH6Uq1MsfjCUQUiHyp3inj4OdUabFwjoch6BiyM00PoYBfz8FpGY4bLn4VkYbc19swUNOZ7e53sZL2kILUYDvW9wTTr1YeSJz0J",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxInyY37P20yTrhBCsT5iEq1XCeOpn7eLNIbCg9T9VJxoYMt9E6xgqQWXLhUWrU0xP9j2tvHHMRCXGmKrQyLkAwzUM7sivYRCABcs8pTiz4TaHk0pcDgQTGmkb7lBbPIlMCEZpFczsKygP9gt4UgVmciLmlIle1LJNhDnhazrH77L9zMfUpyXTogeI6s5jdxebPdBItmByKuoSAdlAYRoZVFFnoeOh9NkK7JNiTrgTws9dE6hf0dxuW1HDAha7jlPdeUM6O3m3WCfPbvgMWV5cBZ0dlsopoDIXU8yAh8i8MYuDyldsR5cPkziDaFcYherL38PpBD6qKu2dj7KK1KTcMXVJtYEV86kkkUsTxP5FkW3P31pjsFEzsgbVNnkOg6ETq9J792HGuuY7GY1nR4YzIMmBIaYmOTJWP1cJfmjNTsrQJFSaQ41duUr7kFVDcjNggyab8HPObKq6nm9dEMpjBIOcu4c3T1UYRe8DwXE60WXOWvEQEnaI9ZkrlspXEK2sU2jNe76dR2DRP7GlPv1PpHjf3k1T6uwIu7nLGnCsTIanOQOUmtSLjH6Uq1MsfjCUQUiHyp3inj4OdUabFwjoch6BiyM00PoYBfz8FpGY4bLn4VkYbc19swUNOZ7e53sZL2kILUYDvW9wTTr1YeSJz0J",
+      "estimatedCost": 22
+    },
+    {
+      "id": "magnetic_field_h_bridge",
+      "name": "Magnetic Backcross Controller",
+      "pins": [
+        "ENA",
+        "IN1",
+        "IN2",
+        "IN3",
+        "IN4",
+        "ENB",
+        "OUT1",
+        "OUT2",
+        "OUT3",
+        "OUT4",
+        "12V",
+        "GND",
+        "5V"
+      ],
+      "type": "module",
+      "partId": "1759fb5a-f6cf-4e96-928c-746e1e5d04c0",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=L298N+Dual+H-Bridge+Motor+Driver&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51ZsU6wMlSL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "IN1,IN2,IN3,IN4,ENA,ENB,OUT1,OUT2,OUT3,OUT4,+12V,+5V,GND"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0CR6BX5QL?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$6.98",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005006365803938.html?pdp_npi=6%40dis%21USD%218.36%214.09%21%21%2156.58%2127.72%21%402151fd3a17794484882586413e0faa%2112000036911879880%21affd%21%21%21%211%210%21",
+            "price": "$4.09",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0CR6BX5QL?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "43x43x27mm",
+      "position3d": {
+        "x": -150,
+        "y": 15,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 43,
+        "height": 27,
+        "depth": 43
+      },
+      "description": "Dual H-bridge driver for controlling two DC motors.",
+      "productName": "L298N Dual H-Bridge Motor Driver",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=L298N",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0Jxfu1X4SjBC1MNh6eF0ffUbyKSMnbBYNdt460px4Y1eJzVfHIvQW41v5C4khRItR9RkvFY2HOCbEzuUrXYw10N8KezpIyA8gHn067LimR3VPVohmZvBiEboBMqPTpiVQJ5Dy59tvbNVgIMKN9Uhls1Hfk0bQsC005VXYz6MpoykarxvZKVds9hCOu4WE3ig8VZLXRTl53bHWT2v89ieLKKIM4MB3E1gPbC2N1nEx2kfrMTY25tmhGEds2yg5zVLmnkBZIgdCl3BgoDe65jaq8DoDR6LrAA9MLPF1VQABdKMG3NTaFO6YYzQ1NfYSLltqGIR14ZphkkutJZgB9RyJ6x7jWlYZmhqpnlUddjRwwtyVJbyBPBgAWdPlrAX5UIuERxsuK3qN3qHy9STAvkn7uVuxThcOttrMnovUSKlbDoigUI7N9r5FgMPPwpdETocq3PyUc1rr0xCPkiL620hJRxRWNKJW1c4c6dznSWN0Ok313Xym9dnXZgu8zvaxF7jPlooOgdRsS40oOHJTkm92wsQQokfYt6Aga0HSK1BduPKl4q4TmHXzHxd2TjMqWzCdWlNG5q0zTv9EqUmMprwg9stCQc8Q9IeETEPWYAQO5s2n3OF1Z6zrsJQnCGCjqJctvGNhX0KFe4ORoLfkaUV3ljOJh",
+      "estimatedCost": 7
+    },
+    {
+      "id": "tesseract_outer_frame",
+      "name": "Tesseract Outer Frame",
+      "type": "structural",
+      "partId": "bd6f9ad8-8a9e-49e6-a012-61f68626c6d1",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Tesseract+Outer+Frame&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "material": "Aluminum Extrusion 2020",
+      "quantity": 1,
+      "amazonUrl": null,
+      "dimensions": "400x400x400mm",
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 400,
+        "height": 400,
+        "depth": 400
+      },
+      "description": "Outer structural frame based on a tesseract geometry for high-rigidity support of the matryoshka chambers.",
+      "purchaseUrl": "https://www.amazon.com/s?k=2020+aluminum+extrusion+400mm",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c3PKdBKT",
+      "estimatedCost": 45
+    },
+    {
+      "id": "matryoshka_outer_shell",
+      "name": "Matryoshka Outer Shell",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "ABS",
+      "quantity": 1,
+      "mountsFor": "main_power_supply",
+      "dimensions": "300x300x300mm",
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 300,
+        "height": 300,
+        "depth": 300
+      },
+      "description": "Primary protective enclosure housing the vacuum and argon environments.",
+      "purchaseUrl": "https://www.amazon.com/s?k=ABS+filament+1.75mm",
+      "estimatedCost": 15.5,
+      "printSettings": "40% infill, 0.2mm layer, enclosed chamber required"
+    },
+    {
+      "id": "matryoshka_inner_thermal_chamber",
+      "name": "Inner Thermal Chamber",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "Carbon Fiber PETG",
+      "quantity": 1,
+      "mountsFor": "induction_heater_module",
+      "dimensions": "150x150x150mm",
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 150,
+        "height": 150,
+        "depth": 150
+      },
+      "description": "Secondary internal shell that holds the high-temperature refractory insulation.",
+      "purchaseUrl": "https://www.amazon.com/s?k=carbon+fiber+petg+filament",
+      "estimatedCost": 12,
+      "printSettings": "100% infill, 0.15mm layer"
+    },
+    {
+      "id": "alumina_ceramic_crucible",
+      "name": "Refractory Crucible",
+      "type": "mechanism",
+      "partId": "1042536d-973a-4768-a1cd-0b4699fcc94b",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=High+Purity+Alumina+Crucible&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/31CaWhj2IHL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0D9NYR7ZQ?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$25.95",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/33049017711.html?pdp_npi=6%40dis%21USD%2111.56%2111.56%21%21%2111.56%2111.56%21%402140f89017812112901578303e132f%2112000057858396367%21affd%21%21%21%211%210%21",
+            "price": "$11.56",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B07KNHVRSJ?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$31.99",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0D9NYR7ZQ?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "40x40x50mm",
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 40,
+        "height": 40,
+        "depth": 50
+      },
+      "description": "Ceramic vessel for 50g pigment melt, capable of withstanding 1800C.",
+      "productName": "High Purity Alumina Crucible",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x4g6z6QO53rvyHStoiwAE6ccRwIY5sFviByMHhitenbzaBzrxt28nBH2KuWtdlBbu0FFuzxX3K7HNpGZnlBwsHwyS0AKT5i4bT4MiTQcktkRKScqNXcie7PG28BRUqIt5e1iGT9auq1X2ckI549CK0VRsgvyBOSRM75hcaGYBC8mV3QAeJR40XwkiJSjbAdE045lwbmtnF2RYNIvPyoXRGOtWXl6C3fF7CZyfDlc3n0lIkhLoekRxABcD7aR8xMvQWz5ZtpgLxrrDL8Ks2HS4Cvy9b3r15e7k4dJtyzS4g0aSHTsU5C3hEtcm7mG9Y7kcJfulvRBn1Ct6ujFJe1lPWEz53cOaL5MI6lb3YU2fXOPpuvXniqNLLQVYyZGT0MHWz8d4Cl5OBYaK3mb3AwHbu7LKrjBrbhGlgUlTKR1dF2g85NvAw0mJPrXT4hxZgtL7xU38QEhZpieNpzYH1TLu4jR731sUB0LoecItm43dpQQDaSF7V7kZ7lBR8dZDqVfNMKMev3VJTut3TDNcC4dMJ4gNe8KuuaP4zGQ4e88vfMfZdCgD9Plogyidkeszk8odeSoedob95Lyphszx7va2pmbO59fewQBciSM3NWTnJX9lwcF3aJ606NR9YuI3n21SdUwpolfHU3976LW0QmObuF6aqDZohwJBYeESW7NWwLynFmA054QX",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x4g6z6QO53rvyHStoiwAE6ccRwIY5sFviByMHhitenbzaBzrxt28nBH2KuWtdlBbu0FFuzxX3K7HNpGZnlBwsHwyS0AKT5i4bT4MiTQcktkRKScqNXcie7PG28BRUqIt5e1iGT9auq1X2ckI549CK0VRsgvyBOSRM75hcaGYBC8mV3QAeJR40XwkiJSjbAdE045lwbmtnF2RYNIvPyoXRGOtWXl6C3fF7CZyfDlc3n0lIkhLoekRxABcD7aR8xMvQWz5ZtpgLxrrDL8Ks2HS4Cvy9b3r15e7k4dJtyzS4g0aSHTsU5C3hEtcm7mG9Y7kcJfulvRBn1Ct6ujFJe1lPWEz53cOaL5MI6lb3YU2fXOPpuvXniqNLLQVYyZGT0MHWz8d4Cl5OBYaK3mb3AwHbu7LKrjBrbhGlgUlTKR1dF2g85NvAw0mJPrXT4hxZgtL7xU38QEhZpieNpzYH1TLu4jR731sUB0LoecItm43dpQQDaSF7V7kZ7lBR8dZDqVfNMKMev3VJTut3TDNcC4dMJ4gNe8KuuaP4zGQ4e88vfMfZdCgD9Plogyidkeszk8odeSoedob95Lyphszx7va2pmbO59fewQBciSM3NWTnJX9lwcF3aJ606NR9YuI3n21SdUwpolfHU3976LW0QmObuF6aqDZohwJBYeESW7NWwLynFmA054QX",
+      "estimatedCost": 22
+    },
+    {
+      "id": "planetary_mill_base",
+      "name": "Mill Drive Base",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "ball_mill_stepper",
+      "dimensions": "200x200x20mm",
+      "position3d": {
+        "x": 0,
+        "y": 10,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 200,
+        "height": 20,
+        "depth": 200
+      },
+      "description": "Main rotating platform for the planetary ball mill assembly.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PETG+filament",
+      "estimatedCost": 8.5,
+      "printSettings": "50% gyroid infill, 0.2mm layer"
+    },
+    {
+      "id": "esp32_control_mount",
+      "name": "Logic Controller Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "mountsFor": "main_controller_esp32",
+      "dimensions": "80x60x15mm",
+      "position3d": {
+        "x": 120,
+        "y": 15,
+        "z": -120
+      },
+      "boundingBox": {
+        "width": 80,
+        "height": 15,
+        "depth": 60
+      },
+      "description": "Vibration-isolated mount for the main ESP32 and H-Bridge logic.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PLA+filament",
+      "estimatedCost": 2.5,
+      "printSettings": "20% infill, 0.2mm layer"
+    },
+    {
+      "id": "magnetic_coil_housing",
+      "name": "Backcross Coil Housing",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "ABS",
+      "quantity": 1,
+      "mountsFor": "magnetic_field_h_bridge",
+      "dimensions": "100x100x60mm",
+      "position3d": {
+        "x": -150,
+        "y": 45,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 100,
+        "height": 60,
+        "depth": 100
+      },
+      "description": "Specific geometry to hold magnetic field coils in a folding singularity configuration.",
+      "purchaseUrl": "https://www.amazon.com/s?k=ABS+filament",
+      "estimatedCost": 7,
+      "printSettings": "60% infill, 0.2mm layer"
+    },
+    {
+      "id": "argon_manifold_mount",
+      "name": "Gas Manifold Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "argon_solenoid_valve",
+      "dimensions": "45x45x30mm",
+      "position3d": {
+        "x": -120,
+        "y": 30,
+        "z": 100
+      },
+      "boundingBox": {
+        "width": 45,
+        "height": 30,
+        "depth": 45
+      },
+      "description": "Support bracket for the argon shielding solenoid and tubing.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PETG+filament",
+      "estimatedCost": 3.2,
+      "printSettings": "30% infill, 0.2mm layer"
+    },
+    {
+      "id": "hv_separator_insulator",
+      "name": "HV Electrostatic Tower",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "high_voltage_generator",
+      "dimensions": "50x50x120mm",
+      "position3d": {
+        "x": -150,
+        "y": 200,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 50,
+        "height": 120,
+        "depth": 50
+      },
+      "description": "High-dielectric insulator for the electrostatic pigment sorting plates.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PETG+filament",
+      "estimatedCost": 6.5,
+      "printSettings": "100% infill, 0.1mm layer"
+    },
+    {
+      "id": "ui_bezel_mount",
+      "name": "Display Bezel",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "mountsFor": "status_display",
+      "dimensions": "100x80x20mm",
+      "position3d": {
+        "x": 0,
+        "y": 350,
+        "z": 150
+      },
+      "boundingBox": {
+        "width": 100,
+        "height": 20,
+        "depth": 80
+      },
+      "description": "External user interface panel for the status display.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PLA+filament",
+      "estimatedCost": 4,
+      "printSettings": "20% infill, 0.2mm layer"
+    },
+    {
+      "id": "planetary_gear_set",
+      "name": "Mill Transmission Gears",
+      "type": "mechanism",
+      "partId": "8e41aae7-c83d-4c46-98cc-724a26c18db1",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Mill+Transmission+Gears&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "material": "Nylon",
+      "quantity": 3,
+      "amazonUrl": "https://www.amazon.com/dp/B01NCKXJEQ?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "50x50x15mm",
+      "position3d": {
+        "x": 0,
+        "y": 25,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 50,
+        "height": 15,
+        "depth": 50
+      },
+      "description": "Set of 3 nylon planetary gears for the ball mill motion.",
+      "purchaseUrl": "https://www.amazon.com/s?k=nylon+planetary+gears",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3xpjK0z5F4tXx7la8qLVQd4zJbXyg9dT8tqlslkUakUkpBnZyuHhx2BNmPH15olnaXYAU7CGkEl1itOQg9DUizxxhQ1b10ZWcRU88pQaRZQzXzGl962y93iSTA4CxQHe3DaZ8YmZsNkttH11hC33caaXHhv6oi79lv3uZNvHogPcDwS51G1sv73fvHegGNISeHH6RyEV3QbjiDTGJuRSBSaOcZ32jEPZhdRPEc0XEdfy8peIRGmwpCuMx0pekg3rfXs28PHqsfGTGrYOKMqJ9Eh4VxiPjJeRZovVAjAtiRjVlsoaAHu9BSffauxU3NmVXofqwZpmiKYU1pVyB2h5op3l00V40OXBXmjdu0b61KZxBSytrDnWZr3hMePM7uEDQa4gnKC9IWRA4oK70qVw4oA1mmctVDK5RnODmUkF8icga7Exrj1yA1N8JxnigRTEqquaxK6HOe8fXGpKNkJN7DYtkJ21K3rERGhvnHxXv4iOKlt8z5TmnMWSDcHPUYsH8owuW5EJ5667CoXD5Nwzd8MfNEg0tM0Kwl3f9bPR1vDDIZDExSmSYPPtRE17xFNGBUjzYSQ025oNvL2Fs1qSuJ8GeXHezGo5J0pyHmNYfJe7BL2m8btxlSNdnmm3sAi7E0yM6ZnU7tpMNjd8oat6FiRL0e9Yy0ozpThjEugvjBhWGOMkMneojv",
+      "estimatedCost": 12
+    },
+    {
+      "id": "chassis_fasteners_m3",
+      "name": "Main Frame Bolts",
+      "type": "misc",
+      "partId": "e5801af1-fc49-4f8a-bdfe-c7696c4a5b70",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=M3+Socket+Head+Screws&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51yRcT8O5qL._SL500_.jpg",
+      "material": "Stainless Steel",
+      "quantity": 50,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0FGV5FCBN?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$9.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005006674897468.html?pdp_npi=6%40dis%21USD%217.19%213.59%21%21%2148.65%2124.32%21%402151fd2c17796351243256285e109c%2112000040057344224%21affd%21%21%21%211%210%21",
+            "price": "$3.59",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0D1XJ766V?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$8.49",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0FGV5FCBN?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "M3x12mm",
+      "description": "Stainless steel screws for securing 3D printed mounts to the aluminum frame.",
+      "productName": "M3 Socket Head Screws",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxvwxYfcKO8oJEk51ZQQZRDk2F3yoX8GB0MixKlFBHcp5EY5RMaocSSEWvr5ej1GhiwUhADFhMkholZfZt92d3MOLPJ4VCMcCueJDoK7JaGWf0ElK3AyxAIFy6FVl07Wh7L6BPRbvKRuFmUjzYJfjxdPQta4JSutPwChFk53JtRxHN8JxUGQrCi0Yd0ieKuquias3PbWDGXeceUwtLjNpOf3XHXtOldIoxSG1fg2oegZzLQ6Yv2j220G4f8lonjVA7eXxw1Pk89cd0S1LHBHHaGM6q8bFR7HFXr29KLPjrOnIpH2BgDVmjBOb7MISoYCqQaCkdElVxqpCgqYIfeInqF7SMZ2gIwloBwYmnGUy4PeFHM1nNiS0hcupcsvycqCu3UzngsB2TGQpGJNaiSrXxYcl0pB1dezdGDEtZTFStX5vkhHBhfnIcGDg2nEcPSajISBPPb507wWbvHIZR8tfJTBb7M5jfLpW1w3z1kmjJY0If871E9JYnNXYTddguww0mJBa6PBACWYqXVVwuHYUOZmG7YJjMGY2owKWiopAIyV9nIMfRbgPmBjz8LvSVxRVn7j7fQcI8Qe32LULzWqKZp8VDVV75fmJhfgjNS9Dh8wiXeOGClfLpvFcB5VkuRGagNnXCa1ReukPNP7GFZamLYMT",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxvwxYfcKO8oJEk51ZQQZRDk2F3yoX8GB0MixKlFBHcp5EY5RMaocSSEWvr5ej1GhiwUhADFhMkholZfZt92d3MOLPJ4VCMcCueJDoK7JaGWf0ElK3AyxAIFy6FVl07Wh7L6BPRbvKRuFmUjzYJfjxdPQta4JSutPwChFk53JtRxHN8JxUGQrCi0Yd0ieKuquias3PbWDGXeceUwtLjNpOf3XHXtOldIoxSG1fg2oegZzLQ6Yv2j220G4f8lonjVA7eXxw1Pk89cd0S1LHBHHaGM6q8bFR7HFXr29KLPjrOnIpH2BgDVmjBOb7MISoYCqQaCkdElVxqpCgqYIfeInqF7SMZ2gIwloBwYmnGUy4PeFHM1nNiS0hcupcsvycqCu3UzngsB2TGQpGJNaiSrXxYcl0pB1dezdGDEtZTFStX5vkhHBhfnIcGDg2nEcPSajISBPPb507wWbvHIZR8tfJTBb7M5jfLpW1w3z1kmjJY0If871E9JYnNXYTddguww0mJBa6PBACWYqXVVwuHYUOZmG7YJjMGY2owKWiopAIyV9nIMfRbgPmBjz8LvSVxRVn7j7fQcI8Qe32LULzWqKZp8VDVV75fmJhfgjNS9Dh8wiXeOGClfLpvFcB5VkuRGagNnXCa1ReukPNP7GFZamLYMT",
+      "estimatedCost": 0.15
+    },
+    {
+      "id": "linear_rail_axis",
+      "name": "Crucible Lift Rail",
+      "type": "mechanism",
+      "partId": "55e6b4a1-217a-4343-a1ce-d16390a200aa",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=MGN12+Linear+Rail&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/31UwUZ40olL._SL500_.jpg",
+      "material": "Stainless Steel",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/item/1005010089088934.html?pdp_npi=6%40dis%21USD%2128.90%2114.45%21%21%21195.40%2197.70%21%4021013cc017793330378387995e0fdb%2112000051099151848%21affd%21%21%21%211%210%21",
+            "price": "$14.45",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B09ZPHPB5F?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$35.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0D9D7GSNH?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$21.99",
+            "vendor": "Amazon"
+          }
+        ],
+        "cadFileUrls": [
+          {
+            "url": "https://cults3d.com/en/3d-model/tool/mgn12-linear-rail-pack-150-300-450mm-high-precision-cad",
+            "label": "MGN12 Linear Rail Pack (150/300/450mm) - Cults3D (CAD/STL/STEP)"
+          },
+          {
+            "url": "https://grabcad.com/library/hiwin-mgn12-linear-rail-400mm-1",
+            "label": "Hiwin MGN12 Linear Rail 400mm - GrabCAD (CAD)"
+          },
+          {
+            "url": "https://sketchfab.com/3d-models/mgn12-linear-rail-only-400mm-long-40f9f5ceb1a44e44a423fa3306e9d1bd",
+            "label": "MGN12 Linear Rail 400mm - Sketchfab (3D Model)"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B09ZPHPB5F?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "200x12x8mm",
+      "position3d": {
+        "x": -80,
+        "y": 200,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 12,
+        "height": 200,
+        "depth": 8
+      },
+      "description": "Precision rail for inserting and removing the crucible from the induction zone.",
+      "productName": "MGN12 Linear Rail",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxhDHwlWkpEa3yNfOmWmiaroZGpiayMp1gdvol3rHskxrXgDTdvbbhHiUbz5eLOOSxN2EeB48hLIgzfgzfMhFXC0bVFUwqQ1SvPRpNhptGu7EY9D7jWg3ytfVe2nxJBKab8mTAlrtIM5mhbojFn2UVXLMfraXmh2k5mtx9HsuURg6XsxBBkMZiJPRE0V00TLDpiKnHYtOobd2Qiw5jbEOOXfc109aDz0bvAIww0SFo3KRWej7IsgIn8ZhEZCp8JhSVglzvjtJFVBuEbytfEOt2ZFWulZRpDNd2lbQ6PQofj6bTH2GeB4Ny0NsxVumdiA8hMfJZkPd9vy8fcYRpOhMrdx1y4MkEBgzb3JbP2wdwwdgIcedDpWXLT35aNFHJgGj7dLtRvHeX763rItlrVN1bOwV9ReBVUxeeokgg9u30uVj1fIx71zMK0CI5FpT9NqNoKJcozdh5fRjkeekPInr1qfswnUqCkdXG4vhMPxHptgZKS9d8ewyUVh76mA5Pbcb9Y8uTYnRBucugiuUWiSThVmvfsU521ky5i5lSApnX49edOYrIPRlOax4mSeS5Cre7G2THVwePV8hVVm9P7XXTJfT7PcXT9nMyXJNVgOhZDTNouzPRRKTnRL44QqtrTqap5vHHZYa4MQbEUO3VBSx4VEb",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxhDHwlWkpEa3yNfOmWmiaroZGpiayMp1gdvol3rHskxrXgDTdvbbhHiUbz5eLOOSxN2EeB48hLIgzfgzfMhFXC0bVFUwqQ1SvPRpNhptGu7EY9D7jWg3ytfVe2nxJBKab8mTAlrtIM5mhbojFn2UVXLMfraXmh2k5mtx9HsuURg6XsxBBkMZiJPRE0V00TLDpiKnHYtOobd2Qiw5jbEOOXfc109aDz0bvAIww0SFo3KRWej7IsgIn8ZhEZCp8JhSVglzvjtJFVBuEbytfEOt2ZFWulZRpDNd2lbQ6PQofj6bTH2GeB4Ny0NsxVumdiA8hMfJZkPd9vy8fcYRpOhMrdx1y4MkEBgzb3JbP2wdwwdgIcedDpWXLT35aNFHJgGj7dLtRvHeX763rItlrVN1bOwV9ReBVUxeeokgg9u30uVj1fIx71zMK0CI5FpT9NqNoKJcozdh5fRjkeekPInr1qfswnUqCkdXG4vhMPxHptgZKS9d8ewyUVh76mA5Pbcb9Y8uTYnRBucugiuUWiSThVmvfsU521ky5i5lSApnX49edOYrIPRlOax4mSeS5Cre7G2THVwePV8hVVm9P7XXTJfT7PcXT9nMyXJNVgOhZDTNouzPRRKTnRL44QqtrTqap5vHHZYa4MQbEUO3VBSx4VEb",
+      "estimatedCost": 18.5
+    },
+    {
+      "id": "thermocouple_sensor_mount",
+      "name": "Crucible Temperature Sensor Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "thermocouple_sensor",
+      "dimensions": "30x30x15mm",
+      "position3d": {
+        "x": 0,
+        "y": 170,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 30,
+        "height": 15,
+        "depth": 30
+      },
+      "description": "Form-fitting cradle for the Crucible Temperature Sensor that holds the sensing surface in its rated orientation. Snap-fit retention so it can be removed for calibration without tools.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    },
+    {
+      "id": "stepper_driver_module_mount",
+      "name": "Mill Motor Driver Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "stepper_driver_module",
+      "dimensions": "50x40x12mm",
+      "position3d": {
+        "x": -120,
+        "y": 15,
+        "z": -120
+      },
+      "boundingBox": {
+        "width": 50,
+        "height": 12,
+        "depth": 40
+      },
+      "description": "Adapter plate for the Mill Motor Driver that bolts to the main chassis with M3 hardware. Includes wire-routing channels.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    },
+    {
+      "id": "power_dist_block",
+      "name": "Power Distribution Block",
+      "pins": [
+        "V_IN",
+        "V24_OUT",
+        "V12_OUT",
+        "V5_OUT",
+        "GND",
+        "V3.3_OUT"
+      ],
+      "type": "module",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/413EBF8dv1L._SL500_.jpg",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 50,
+        "z": 140
+      },
+      "boundingBox": {
+        "width": 60,
+        "height": 20,
+        "depth": 40
+      },
+      "description": "Central hub for regulating and distributing power rails.",
+      "productName": "Power Distribution Block",
+      "purchaseUrl": "",
+      "estimatedCost": 0,
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Power+Distribution+Block&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1"
+    },
+    {
+      "id": "hv_relay",
+      "name": "HV Control Relay",
+      "pins": [
+        "IN",
+        "GND",
+        "COM",
+        "NO"
+      ],
+      "type": "module",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/31q3l9eq4SL._SL500_.jpg",
+      "quantity": 1,
+      "position3d": {
+        "x": -150,
+        "y": 330,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 30,
+        "height": 20,
+        "depth": 30
+      },
+      "description": "Logic-level relay to switch 12V supply to the HV generator.",
+      "productName": "HV Control Relay",
+      "purchaseUrl": "",
+      "estimatedCost": 0,
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=HV+Control+Relay&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1"
+    },
+    {
+      "id": "resonate_particle_chronograph",
+      "name": "Particle Chronograph",
+      "pins": [
+        "VCC",
+        "GND",
+        "RX",
+        "TX",
+        "LASER_PWM",
+        "TRIG"
+      ],
+      "type": "sensor",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=DIY+Laser+Spectroscopy+Chamber&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://imgs.search.brave.com/hckzeBl4SLAqi4i7LeyhRO8uQKm7yYFE8KRwMlHSOeE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmVi/YXlpbWcuY29tL2lt/YWdlcy9nL2RFb0FB/T1N3VlZ4bjEtb2sv/cy1sNTAwLmpwZw",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": -100
+      },
+      "boundingBox": {
+        "width": 100,
+        "height": 100,
+        "depth": 100
+      },
+      "description": "Integrates laser excitation and interferometry to monitor and shift particle energetic states.",
+      "productName": "DIY Laser Spectroscopy Chamber",
+      "purchaseUrl": "https://www.thorlabs.com/",
+      "estimatedCost": 245
+    },
+    {
+      "id": "ultrasonic_driver_array",
+      "name": "Ultrasonic Levitation Driver",
+      "pins": [
+        "VCC",
+        "GND",
+        "OSC_1",
+        "OSC_2",
+        "OSC_3"
+      ],
+      "type": "actuator",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Core+Electronics+Ultrasonic+Levitation+Kit&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://ae-pic-a1.aliexpress-media.com/kf/S85c0a13cf524466780d54031e2b91c21U.jpg",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 140,
+        "z": -100
+      },
+      "boundingBox": {
+        "width": 40,
+        "height": 40,
+        "depth": 40
+      },
+      "description": "Generates triple-frequency ultrasonic waves to trap and levitate particles in the vacuum chamber.",
+      "productName": "Core Electronics Ultrasonic Levitation Kit",
+      "purchaseUrl": "https://www.adafruit.com/",
+      "estimatedCost": 45
+    },
+    {
+      "id": "ionic_steering_coils",
+      "name": "Ionic Steering Coils",
+      "pins": [
+        "COIL_A_POS",
+        "COIL_A_NEG",
+        "COIL_B_POS",
+        "COIL_B_NEG"
+      ],
+      "type": "actuator",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Custom+Ionic+Deflection+Assembly&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://imgs.search.brave.com/Xc-SGTTy87m0ZlBrjNdjBxsQWDXe_HgSJ06jZPGNR0g/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9naWxs/aWFtdGVjaG5pY2Fs/c2VydmljZXMuY29t/L2Nkbi9zaG9wL2Zp/bGVzL0lNR18wNzky/XzI2ODQ0YTFhLTgy/NzYtNGI4Ni1iOGI5/LTQ4Y2NhZjgxZThi/Yi5qcGc_dj0xNzY0/MjY5MzQzJndpZHRo/PTUzMw",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": -100
+      },
+      "boundingBox": {
+        "width": 60,
+        "height": 60,
+        "depth": 60
+      },
+      "description": "Electromagnetic coils for precise spatial positioning of ionized particles.",
+      "productName": "Custom Ionic Deflection Assembly",
+      "purchaseUrl": "https://www.mouser.com/",
+      "estimatedCost": 35
+    },
+    {
+      "id": "em_shielding_enclosure",
+      "name": "EMC Shielding Box",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Mu-Metal+Magnetic+Shielding&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": -100
+      },
+      "boundingBox": {
+        "width": 120,
+        "height": 120,
+        "depth": 120
+      },
+      "description": "Redundant electromagnetic shielding to protect sensitive interferometry from induction heater noise.",
+      "productName": "Mu-Metal Magnetic Shielding",
+      "purchaseUrl": "https://www.mcmaster.com/",
+      "estimatedCost": 60
+    },
+    {
+      "id": "mosfet_argon_driver",
+      "name": "Solenoid MOSFET Driver",
+      "pins": [
+        "GATE",
+        "DRAIN",
+        "SOURCE"
+      ],
+      "type": "module",
+      "category": "electrical",
+      "imageUrl": "https://ae-pic-a1.aliexpress-media.com/kf/S386297be08fd487298e05c3791a64c38V.jpg",
+      "quantity": 1,
+      "position3d": {
+        "x": -120,
+        "y": 80,
+        "z": 100
+      },
+      "boundingBox": {
+        "width": 20,
+        "height": 10,
+        "depth": 20
+      },
+      "description": "Logic level MOSFET to drive inductive solenoid load",
+      "productName": "Solenoid MOSFET Driver",
+      "purchaseUrl": "",
+      "estimatedCost": 0,
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Solenoid+MOSFET+Driver&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1"
+    },
+    {
+      "id": "mini_vacuum_pump",
+      "name": "Micro Vacuum Pump",
+      "pins": [
+        "POS",
+        "NEG"
+      ],
+      "type": "actuator",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=12V+DC+Micro+Vacuum+Pump+5L%2Fmin&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41yueMp7bsL._SL500_.jpg",
+      "quantity": 1,
+      "position3d": {
+        "x": 120,
+        "y": 50,
+        "z": 100
+      },
+      "boundingBox": {
+        "width": 50,
+        "height": 50,
+        "depth": 80
+      },
+      "description": "Maintains low-pressure environment for particle levitation and transmutation.",
+      "productName": "12V DC Micro Vacuum Pump 5L/min",
+      "purchaseUrl": "https://www.amazon.com/s?k=12V+DC+Micro+Vacuum+Pump",
+      "estimatedCost": 18.5
+    },
+    {
+      "id": "vacuum_pressure_sensor",
+      "name": "Vacuum Pressure Sensor",
+      "pins": [
+        "VCC",
+        "GND",
+        "OUT"
+      ],
+      "type": "sensor",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=MPX5100DP+Pressure+Sensor&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://imgs.search.brave.com/k6nMR8sCGzQWaDdqSbLK6qpoNsP6r0qvrp9xujT-sUg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmVi/YXlpbWcuY29tL2lt/YWdlcy9nL1NXb0FB/ZVN3ZjU1cU9vcjkv/cy1sNDAwLndlYnA",
+      "quantity": 1,
+      "position3d": {
+        "x": 150,
+        "y": 225,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 15,
+        "height": 15,
+        "depth": 15
+      },
+      "description": "Monitors the internal vacuum level for feedback-controlled throttling.",
+      "productName": "MPX5100DP Pressure Sensor",
+      "purchaseUrl": "https://www.digikey.com/en/products/detail/nxp-usa-inc/MPX5100DP/464055",
+      "estimatedCost": 12
+    },
+    {
+      "id": "vacuum_chamber_port",
+      "name": "Vacuum Interface Port",
+      "type": "mechanism",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=KF16+Flange+to+Hose+Adapter&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "quantity": 1,
+      "position3d": {
+        "x": 150,
+        "y": 200,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 30,
+        "height": 30,
+        "depth": 30
+      },
+      "description": "Hermetic seal interface for the vacuum pump and pressure sensor.",
+      "productName": "KF16 Flange to Hose Adapter",
+      "purchaseUrl": "https://www.mcmaster.com/vacuum-flanges/",
+      "estimatedCost": 15
+    },
+    {
+      "id": "isotropic_field_core",
+      "name": "Isotropic Field Generator Core",
+      "pins": [
+        "COIL_IN_A",
+        "COIL_OUT_A",
+        "COIL_IN_B",
+        "COIL_OUT_B"
+      ],
+      "type": "actuator",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Custom+1689-turn+AWG22+Toroidal+Copper+Tunnel&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://imgs.search.brave.com/Up1I3-cxbuMd7cgazD_1Hfwzk95-dRXo9E2n1XG6v1k/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5tYWRlLWluLWNo/aW5hLmNvbS8yMDNm/MGowMGlLV1ZyU1Bj/bG51Ty9GbGF0LVdp/cmUtU3BpcmFsLUVu/YW1lbGVkLUNvcHBl/ci1XaXJlLUZsYXQt/Q29pbC1GbGF0LUNv/cHBlci05OC1UdXJu/cy1XaW5kaW5nLUNv/cHBlci1Db2lsLndl/YnA",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 120,
+        "height": 120,
+        "depth": 120
+      },
+      "description": "A complex hollow copper tunnel with interlapped turns designed to generate eddy currents for secondary flux input.",
+      "productName": "Custom 1689-turn AWG22 Toroidal Copper Tunnel",
+      "purchaseUrl": "https://www.amazon.com/s?k=22+awg+magnet+wire+copper",
+      "estimatedCost": 85
+    },
+    {
+      "id": "flux_monitor_hall",
+      "name": "Geomagnetic Hall Sensor",
+      "pins": [
+        "VCC",
+        "GND",
+        "OUT"
+      ],
+      "type": "sensor",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=SS49E+Linear+Hall+Effect+Sensor&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/411wfO2LmWL._SL500_.jpg",
+      "quantity": 2,
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 85
+      },
+      "boundingBox": {
+        "width": 10,
+        "height": 10,
+        "depth": 5
+      },
+      "description": "Monitors the local flux within the ESA chamber for resonance tuning.",
+      "productName": "SS49E Linear Hall Effect Sensor",
+      "purchaseUrl": "https://www.amazon.com/s?k=SS49E+Hall+sensor",
+      "estimatedCost": 2
+    },
+    {
+      "id": "logic-level-shifter-i2c",
+      "name": "I2C Logic Level Shifter (3.3V to 5V)",
+      "pins": [
+        "LV1",
+        "LV2",
+        "HV1",
+        "HV2",
+        "LV",
+        "HV",
+        "GND"
+      ],
+      "type": "module",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51O1JpZtAeL._SL500_.jpg",
+      "quantity": 1,
+      "position3d": {
+        "x": 120,
+        "y": 40,
+        "z": -120
+      },
+      "boundingBox": {
+        "width": 20,
+        "height": 5,
+        "depth": 15
+      },
+      "productName": "I2C Logic Level Shifter (3.3V to 5V)",
+      "purchaseUrl": "",
+      "estimatedCost": 0,
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=I2C+Logic+Level+Shifter+%283.3V+to+5V%29&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1"
+    },
+    {
+      "id": "logic-level-shifter-spi",
+      "name": "SPI Logic Level Shifter (3.3V to 5V)",
+      "pins": [
+        "LV1",
+        "LV2",
+        "LV3",
+        "LV4",
+        "HV1",
+        "HV2",
+        "HV3",
+        "HV4",
+        "LV",
+        "HV",
+        "GND"
+      ],
+      "type": "module",
+      "category": "electrical",
+      "imageUrl": "https://ae-pic-a1.aliexpress-media.com/kf/S25b2929e0a484ab99fb1732427e463e4G.jpg",
+      "quantity": 1,
+      "position3d": {
+        "x": 120,
+        "y": 45,
+        "z": -120
+      },
+      "boundingBox": {
+        "width": 25,
+        "height": 5,
+        "depth": 20
+      },
+      "productName": "SPI Logic Level Shifter (3.3V to 5V)",
+      "purchaseUrl": "",
+      "estimatedCost": 0,
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=SPI+Logic+Level+Shifter+%283.3V+to+5V%29&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1"
+    },
+    {
+      "id": "mini_electrostatic_accelerator",
+      "name": "Miniature Particle Accelerator",
+      "pins": [
+        "VCC",
+        "GND",
+        "CTRL_PWM",
+        "ENABLE",
+        "ION_SOURCE_POS"
+      ],
+      "type": "module",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Pelletron-style+Miniature+Electrostatic+Accelerator&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://imgs.search.brave.com/6myBpIJugLk3VFbh8GvJP9XwscEa5KXW63sOljAC3Lc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy82/LzZkL01vbm9jaHJv/bWVfQ1JUX2VsZWN0/cm9uX2d1bl9jbG9z/ZV91cC5qcGc",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 250,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 40,
+        "height": 120,
+        "depth": 40
+      },
+      "description": "Generates high-velocity ions to overcome the Coulomb barrier for trace element transmutation.",
+      "productName": "Pelletron-style Miniature Electrostatic Accelerator",
+      "purchaseUrl": "https://www.google.com/search?q=miniature+electrostatic+particle+accelerator+source",
+      "estimatedCost": 450
+    },
+    {
+      "id": "lead_shielding_enclosure",
+      "name": "High-Density Radiation Shielding",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Cast+Lead+Shielding+Bricks+and+Sheets&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 380,
+        "height": 380,
+        "depth": 380
+      },
+      "description": "99.9% pure lead shielding to block X-rays and gamma radiation emitted during synthesis.",
+      "productName": "Cast Lead Shielding Bricks and Sheets",
+      "purchaseUrl": "https://www.google.com/search?q=lead+radiation+shielding+bricks",
+      "estimatedCost": 120
+    },
+    {
+      "id": "borated_polyethylene_liner",
+      "name": "Neutron Moderator Liner",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=5%25+Borated+Polyethylene+Sheet&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 370,
+        "height": 370,
+        "depth": 370
+      },
+      "description": "Captures thermal neutrons to prevent activation of external components.",
+      "productName": "5% Borated Polyethylene Sheet",
+      "purchaseUrl": "https://www.google.com/search?q=borated+polyethylene+neutron+shielding",
+      "estimatedCost": 85
+    },
+    {
+      "id": "accelerator_mount",
+      "name": "Accelerator Structural Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 250,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 60,
+        "height": 60,
+        "depth": 60
+      },
+      "description": "Secures the accelerator tube within the resonance chamber.",
+      "productName": "Custom 3D Printed PETG High-Temp Mount",
+      "purchaseUrl": "https://www.google.com/search?q=custom+PETG+structural+mount",
+      "estimatedCost": 12
+    },
+    {
+      "id": "arcsync_reactor",
+      "name": "ArcSync Reactor",
+      "pins": [
+        "P_IN",
+        "P_OUT",
+        "SYNC_IN",
+        "GND",
+        "VCC"
+      ],
+      "type": "module",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Phase-Locked+Plasma+Synchronization+Module&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://imgs.search.brave.com/hbifHHPXITE3pUxmZ7pJ4X8lSnVCcYawRIBjvyT6x7Y/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVseW9uLXBsYXNt/YS5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjMvMDIvU0tJ/XzIyMDgxMC0wMDAz/LTEtZWRpdGVkLmpw/Zw",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 60,
+        "height": 60,
+        "depth": 60
+      },
+      "description": "Synchronizes high-frequency plasma pulses from the accelerator with the reactor cycle.",
+      "productName": "Phase-Locked Plasma Synchronization Module",
+      "purchaseUrl": "https://www.amazon.com/s?k=plasma+synchronization+module",
+      "estimatedCost": 145
+    },
+    {
+      "id": "coulombus_barrier_chamber",
+      "name": "Coulombus Barrier Chamber",
+      "type": "mechanism",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=High-Density+Fusion+Synthesis+Vessel&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "quantity": 1,
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 0
+      },
+      "boundingBox": {
+        "width": 100,
+        "height": 100,
+        "depth": 100
+      },
+      "description": "A reinforced vessel designed to contain high-density plasma for barrier breach experiments.",
+      "productName": "High-Density Fusion Synthesis Vessel",
+      "purchaseUrl": "https://www.amazon.com/s?k=high+density+fusion+chamber",
+      "estimatedCost": 210
+    },
+    {
+      "id": "sic_h_bridge_pro",
+      "name": "SiC H-Bridge Driver",
+      "pins": [
+        "PWM_L",
+        "PWM_R",
+        "EN",
+        "VCC",
+        "GND",
+        "B_POS",
+        "B_NEG",
+        "OUT_A",
+        "OUT_B"
+      ],
+      "type": "module",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Cree%2FWolfspeed+Silicon+Carbide+MOSFET+Power+Module&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "quantity": 1,
+      "description": "High-frequency SiC MOSFET bridge for high-current 17Hz resonance cycles.",
+      "productName": "Cree/Wolfspeed Silicon Carbide MOSFET Power Module",
+      "purchaseUrl": "https://www.digikey.com/en/products/filter/power-driver-modules/722",
+      "estimatedCost": 145,
+      "imageUrl": "https://m.media-amazon.com/images/I/41TvudwzL8L._SL500_.jpg",
+      "boundingBox": {
+        "width": 60,
+        "height": 30,
+        "depth": 60
+      },
+      "position3d": {
+        "x": -80,
+        "y": 40,
+        "z": -150
+      }
+    },
+    {
+      "id": "resonance_capacitor_bank",
+      "name": "Resonance Capacitor Bank",
+      "pins": [
+        "POS",
+        "NEG"
+      ],
+      "type": "module",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=1000uF+400V+Low-ESR+Pulse+Capacitors&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/31wqh9OQ1TL._SL500_.jpg",
+      "quantity": 1,
+      "description": "Massive capacitor bank to store and recirculate iterative magnetic flux energy.",
+      "productName": "1000uF 400V Low-ESR Pulse Capacitors",
+      "purchaseUrl": "https://www.mouser.com/c/capacitors/aluminum-electrolytic-capacitors/aluminum-electrolytic-capacitors-snap-in/",
+      "estimatedCost": 65,
+      "boundingBox": {
+        "width": 150,
+        "height": 80,
+        "depth": 100
+      },
+      "position3d": {
+        "x": 0,
+        "y": 40,
+        "z": -150
+      }
+    },
+    {
+      "id": "high_temp_ceramic_standoffs",
+      "name": "Thermal Insulation Standoffs",
+      "type": "misc",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Alumina+Ceramic+Threaded+Standoffs+M3&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "quantity": 8,
+      "description": "Heat-resistant standoffs to isolate the field core from the chassis during resonance.",
+      "productName": "Alumina Ceramic Threaded Standoffs M3",
+      "purchaseUrl": "https://www.mcmaster.com/ceramic-standoffs/",
+      "estimatedCost": 22,
+      "boundingBox": {
+        "width": 10,
+        "height": 30,
+        "depth": 10
+      },
+      "position3d": {
+        "x": 50,
+        "y": 185,
+        "z": 50
+      }
+    },
+    {
+      "id": "neural_matrix_controller",
+      "name": "Neural Matrix Controller",
+      "productName": "Jetson Orin Nano Developer Kit",
+      "category": "electrical",
+      "type": "mcu",
+      "quantity": 1,
+      "estimatedCost": 499,
+      "purchaseUrl": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/",
+      "description": "High-speed neural processor for real-time plasma stability and 432Hz phase-locking.",
+      "pins": [
+        "VCC",
+        "GND",
+        "CAN_H",
+        "CAN_L",
+        "I2C_SDA",
+        "I2C_SCL",
+        "PWM_0",
+        "PWM_1",
+        "GPIO_SYNC"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Jetson+Orin+Nano+Developer+Kit&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/21OqzbXMrzL._SL500_.jpg",
+      "boundingBox": {
+        "width": 100,
+        "height": 20,
+        "depth": 80
+      },
+      "position3d": {
+        "x": 120,
+        "y": 50,
+        "z": -120
+      }
+    },
+    {
+      "id": "via_coil_drivers",
+      "name": "VIA High-Power Coil Drivers",
+      "productName": "Apex Microtechnology PA107DP",
+      "category": "electrical",
+      "type": "module",
+      "quantity": 4,
+      "estimatedCost": 185,
+      "purchaseUrl": "https://www.digikey.com/en/products/detail/apex-microtechnology/PA107DP/1161118",
+      "description": "Ultra-high power operational amplifiers for driving the toroidal magnetic bias coils.",
+      "pins": [
+        "+Vs",
+        " -Vs",
+        "OUT",
+        "IN_POS",
+        "IN_NEG",
+        "GND"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Apex+Microtechnology+PA107DP&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://imgs.search.brave.com/ZBoHXSXnHYQ44JzeulT4GSu2cBPhHJAZ_FL5lcXiT0A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9vc3Mu/b3JpZ2luLWljLmNv/bS9wcm9kdWN0SW1h/Z2VzVHdvL3BhMTA3/ZHBfU1BMLmpwZz94/LW9zcy1wcm9jZXNz/PWltYWdlL3Jlc2l6/ZSx3XzY0MCxoXzY0/MCxsaW1pdF8wL3dh/dGVybWFyayxpbWFn/ZV9ZWFYwYUM5UFJF/Y3RWMkYwWlhKdFlY/SnJMV2d4TURBdWNH/NW4",
+      "boundingBox": {
+        "width": 80,
+        "height": 30,
+        "depth": 80
+      },
+      "position3d": {
+        "x": -150,
+        "y": 100,
+        "z": 0
+      }
+    },
+    {
+      "id": "toroidal_flux_sensors",
+      "name": "Toroidal Flux Sensors",
+      "productName": "Honeywell CSNP661 Closed Loop Hall Effect",
+      "category": "electrical",
+      "type": "sensor",
+      "quantity": 3,
+      "estimatedCost": 45,
+      "purchaseUrl": "https://www.mouser.com/ProductDetail/Honeywell/CSNP661",
+      "description": "Monitors magnetic flux density within the toroidal chamber for real-time feedback.",
+      "pins": [
+        "VCC",
+        "GND",
+        "OUT",
+        "SCL",
+        "SDA"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Honeywell+CSNP661+Closed+Loop+Hall+Effect&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/116RZvMeLxL._SL500_.jpg",
+      "boundingBox": {
+        "width": 20,
+        "height": 20,
+        "depth": 20
+      },
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 70
+      }
+    },
+    {
+      "id": "ln2_cooling_jacket",
+      "name": "LN2 Cryogenic Jacket",
+      "productName": "Custom Liquid Nitrogen Cooling Loop",
+      "category": "mechanical",
+      "type": "mechanism",
+      "quantity": 1,
+      "estimatedCost": 350,
+      "purchaseUrl": "https://www.mcmaster.com/cryogenic-tubing/",
+      "description": "Vacuum-jacketed liquid nitrogen loop to maintain superconducting temperatures.",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Custom+Liquid+Nitrogen+Cooling+Loop&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "boundingBox": {
+        "width": 160,
+        "height": 160,
+        "depth": 160
+      },
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 0
+      }
+    },
+    {
+      "id": "vibranium_alloy_chassis",
+      "name": "High-Strength Alloy Reactor Chassis",
+      "productName": "Inconel 718 Spherical Containment Vessel",
+      "category": "mechanical",
+      "type": "enclosure",
+      "quantity": 1,
+      "estimatedCost": 1200,
+      "purchaseUrl": "https://www.google.com/search?q=inconel+718+spherical+vacuum+chamber",
+      "description": "A high-strength refractory alloy chassis designed to contain high-frequency resonance plasma.",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Inconel+718+Spherical+Containment+Vessel&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "boundingBox": {
+        "width": 140,
+        "height": 140,
+        "depth": 140
+      },
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 0
+      }
+    },
+    {
+      "id": "can-transceiver-01",
+      "name": "CAN Transceiver ESP32",
+      "category": "electrical",
+      "type": "module",
+      "productName": "CAN Transceiver ESP32",
+      "description": "3.3V CAN Transceiver for Main Controller",
+      "pins": [
+        "TXD",
+        "RXD",
+        "CANH",
+        "CANL",
+        "VCC",
+        "GND"
+      ],
+      "quantity": 1,
+      "estimatedCost": 0,
+      "purchaseUrl": "",
+      "imageUrl": "https://imgs.search.brave.com/uVD-t13DhTmrpg9cjQ5DD4F5F2Uc9ssMRpTZlPp8AuA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4t/c2hvcC5hZGFmcnVp/dC5jb20vOTcweDcy/OC81NzA4LTA1Lmpw/Zw",
+      "boundingBox": {
+        "width": 20,
+        "height": 10,
+        "depth": 15
+      },
+      "position3d": {
+        "x": 100,
+        "y": 30,
+        "z": -120
+      }
+    },
+    {
+      "id": "spacetime_metric_modulator",
+      "name": "Metric Modulator Module",
+      "productName": "Agilent/Keysight 33500B Series Function Generator",
+      "category": "electrical",
+      "type": "module",
+      "quantity": 1,
+      "estimatedCost": 1200,
+      "purchaseUrl": "https://www.keysight.com/us/en/products/function-generators/33500b-series-waveform-generators.html",
+      "description": "Generates the precise 432Hz harmonic signal required for local spacetime metric compression.",
+      "pins": [
+        "SYNC_OUT",
+        "SIGNAL_OUT",
+        "CH1",
+        "GND"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Agilent%2FKeysight+33500B+Series+Function+Generator&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://imgs.search.brave.com/66TO9e4sH_mJc8k-5rCLRh0u4WLo_c1WoYLtjAtPV_w/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/bmV3YXJrLmNvbS9w/cm9kdWN0aW1hZ2Vz/L3N0YW5kYXJkL2Vu/X1VTLzk1SDgwMDEt/NDAuanBn",
+      "boundingBox": {
+        "width": 150,
+        "height": 60,
+        "depth": 150
+      },
+      "position3d": {
+        "x": 0,
+        "y": 370,
+        "z": -100
+      }
+    },
+    {
+      "id": "degenerate_stabilizer_coils",
+      "name": "Degenerate Stabilization Coils",
+      "productName": "High-Frequency Litz Wire Coil Assembly",
+      "category": "electrical",
+      "type": "actuator",
+      "quantity": 4,
+      "estimatedCost": 180,
+      "purchaseUrl": "https://www.mouser.com/c/?q=litz%20wire%20coils",
+      "description": "Maintains the shared quantum matrix state during the transition to degenerate matter.",
+      "pins": [
+        "POS",
+        "NEG"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=High-Frequency+Litz+Wire+Coil+Assembly&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://imgs.search.brave.com/WyTD1W_5AEdz0ujwjHxilJjXDMpiv3P3NT3Q9tMqCf4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zLmFs/aWNkbi5jb20vQHNj/MDQva2YvSGZmODc5/NTJmMGQ0YzRjNWM5/ZDU2ZTVlOWQxMzU2/ZDE2bi5qcGdfMzAw/eDMwMC5qcGc",
+      "boundingBox": {
+        "width": 130,
+        "height": 130,
+        "depth": 130
+      },
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 0
+      }
+    },
+    {
+      "id": "harmonic_oscillator_432hz",
+      "name": "Precision 432Hz Oscillator",
+      "productName": "SiTime Programmable Oscillator",
+      "category": "electrical",
+      "type": "sensor",
+      "quantity": 1,
+      "estimatedCost": 12,
+      "purchaseUrl": "https://www.digikey.com/en/products/filter/oscillators/172",
+      "description": "Ultra-stable master clock for synchronizing the reactor pulse with the target harmonic.",
+      "pins": [
+        "VCC",
+        "GND",
+        "OUT"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=SiTime+Programmable+Oscillator&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://imgs.search.brave.com/kXL2srCP-tpJwt4bx5giQg3O8r8JUOMtdvCOu3AJ4BI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9yZXMu/dXRtZWwuY29tL0lt/YWdlcy9jYXRlZ29y/eS9DcnlzdGFscywl/MjBPc2NpbGxhdG9y/cywlMjBSZXNvbmF0/b3JzLnBuZw",
+      "boundingBox": {
+        "width": 10,
+        "height": 5,
+        "depth": 10
+      },
+      "position3d": {
+        "x": 110,
+        "y": 95,
+        "z": -120
+      }
+    },
+    {
+      "id": "quantum_state_interferometer",
+      "name": "Quantum State Interferometer",
+      "productName": "Thorlabs Laser Interferometer Kit",
+      "category": "electrical",
+      "type": "sensor",
+      "quantity": 1,
+      "estimatedCost": 850,
+      "purchaseUrl": "https://www.thorlabs.com/",
+      "description": "Monitors the collapse of electron shells in real-time for neural feedback.",
+      "pins": [
+        "VCC",
+        "GND",
+        "SDA",
+        "SCL",
+        "SYNC"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Thorlabs+Laser+Interferometer+Kit&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/51yvB8hhqxL._SL500_.jpg",
+      "boundingBox": {
+        "width": 50,
+        "height": 50,
+        "depth": 50
+      },
+      "position3d": {
+        "x": 0,
+        "y": 275,
+        "z": 0
+      }
+    },
+    {
+      "id": "high_current_ion_source",
+      "name": "High-Current Deuterium Ion Source",
+      "productName": "RF-Driven Plasma Ion Source 10mA",
+      "category": "electrical",
+      "type": "module",
+      "quantity": 1,
+      "estimatedCost": 850,
+      "purchaseUrl": "https://www.google.com/search?q=RF+driven+plasma+ion+source+10mA",
+      "description": "High-flux ion generator for deep Coulomb barrier penetration.",
+      "pins": [
+        "VCC",
+        "GND",
+        "RF_IN",
+        "GAS_IN",
+        "ION_OUT",
+        "CTRL"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=RF-Driven+Plasma+Ion+Source+10mA&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://imgs.search.brave.com/aSWQ24VG02eqqJGuT1dNVwPhHH6jekXinIwqwgv8yy8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Y2FtZWNhLmNvbS8t/L21lZGlhL2FtZXRl/a2NhbWVjYS9hY2Ft/ZWNhL3Byb2R1Y3Rz/L2Vjci1zb3VyY2Vz/L3Rlcy00MC5wbmc_/aD0xODAmbGE9ZW4m/dz0yMTUmcmV2aXNp/b249ZjFjOTBkZDIt/ZWJlZC00NWVmLWEy/MzktNGNkNWRkMDRh/OWJjJmhhc2g9QUEy/Nzc3NkRDMTgwNTAy/NUZDODVEOTkxNkQy/OEQwNTU",
+      "boundingBox": {
+        "width": 80,
+        "height": 80,
+        "depth": 80
+      },
+      "position3d": {
+        "x": 0,
+        "y": 330,
+        "z": 0
+      }
+    },
+    {
+      "id": "feedstock_injector",
+      "name": "Isotopic Feedstock Injector",
+      "productName": "Precision Piezoelectric Powder Injector",
+      "category": "electrical",
+      "type": "actuator",
+      "quantity": 1,
+      "estimatedCost": 275,
+      "purchaseUrl": "https://www.google.com/search?q=piezoelectric+powder+injector+scientific",
+      "description": "Directly feeds specific elemental isotopes into the ArcSync plasma stream.",
+      "pins": [
+        "VCC",
+        "GND",
+        "SIGNAL_IN"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Precision+Piezoelectric+Powder+Injector&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://imgs.search.brave.com/zlRw7KbAH06JBv0ajZ98epRXs4iROBkMGIhzIz8uxkw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zLmFs/aWNkbi5jb20vQHNj/MDQva2YvSGVjYTZk/YjhjYzM1OTRlZTg5/NmU1MDgzMDE1MmE0/NDFkai5wbmdfMzAw/eDMwMC5qcGc",
+      "boundingBox": {
+        "width": 30,
+        "height": 60,
+        "depth": 30
+      },
+      "position3d": {
+        "x": 0,
+        "y": 140,
+        "z": 0
+      }
+    },
+    {
+      "id": "precision_timing_module",
+      "name": "Atomic Synchronization Module",
+      "productName": "Symmetricom SA.45s CSAC Chip Scale Atomic Clock",
+      "category": "electrical",
+      "type": "sensor",
+      "quantity": 1,
+      "estimatedCost": 1500,
+      "purchaseUrl": "https://www.microsemi.com/product-directory/embedded-clocks-oscillators/3596-chip-scale-atomic-clock-csac",
+      "description": "Provides the 10MHz reference frequency required for stable 432Hz metric compression without drift.",
+      "pins": [
+        "VCC",
+        "GND",
+        "10MHZ_OUT",
+        "RS232_TX",
+        "RS232_RX"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Symmetricom+SA.45s+CSAC+Chip+Scale+Atomic+Clock&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/41CaQBJWvnL._SL500_.jpg",
+      "boundingBox": {
+        "width": 40,
+        "height": 10,
+        "depth": 40
+      },
+      "position3d": {
+        "x": 120,
+        "y": 70,
+        "z": -120
+      }
+    },
+    {
+      "id": "high_power_rf_amplifier",
+      "name": "Resonance Power Stage",
+      "productName": "GaN-based 500W RF Power Amplifier Module",
+      "category": "electrical",
+      "type": "power",
+      "quantity": 1,
+      "estimatedCost": 450,
+      "purchaseUrl": "https://www.pasternack.com/rf-amplifiers-category.aspx",
+      "description": "Drives the stabilization coils with sufficient current to simulate neutron star pressures.",
+      "pins": [
+        "VCC_48V",
+        "GND",
+        "RF_IN",
+        "RF_OUT",
+        "ENABLE"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=GaN-based+500W+RF+Power+Amplifier+Module&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/41MHJm+qEuS._SL500_.jpg",
+      "boundingBox": {
+        "width": 100,
+        "height": 40,
+        "depth": 100
+      },
+      "position3d": {
+        "x": 80,
+        "y": 40,
+        "z": -150
+      }
+    },
+    {
+      "id": "phase_locked_loop_controller",
+      "name": "Metric Phase Controller",
+      "productName": "ADF4351 Wideband Frequency Synthesizer",
+      "category": "electrical",
+      "type": "module",
+      "quantity": 1,
+      "estimatedCost": 25,
+      "purchaseUrl": "https://www.analog.com/en/products/adf4351.html",
+      "description": "Synthesizes the exact 432Hz harmonic from the atomic clock reference.",
+      "pins": [
+        "VCC",
+        "GND",
+        "R_IN",
+        "RF_OUT",
+        "DATA",
+        "CLK",
+        "LE"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ADF4351+Wideband+Frequency+Synthesizer&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://imgs.search.brave.com/OKaz1_T1U0nyUixYwF1jiOP7sguwbrgKJAiJ18SKCq8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91ay5m/YXJuZWxsLmNvbS9w/cm9kdWN0aW1hZ2Vz/L3RodW1ibmFpbC9l/bl9HQi80MDM0MjI4/LTQwLmpwZw",
+      "boundingBox": {
+        "width": 30,
+        "height": 10,
+        "depth": 30
+      },
+      "position3d": {
+        "x": 120,
+        "y": 90,
+        "z": -120
+      }
+    },
+    {
+      "id": "gev_multiplier_stack",
+      "name": "GeV Pulse Multiplier",
+      "productName": "Giga-Electronvolt Cockcroft-Walton Pulse Stack",
+      "category": "electrical",
+      "type": "module",
+      "quantity": 1,
+      "estimatedCost": 4500,
+      "purchaseUrl": "https://www.google.com/search?q=GeV+pulse+multiplier+stack",
+      "description": "A high-density voltage multiplier designed for giga-electronvolt nucleosynthesis pulses.",
+      "pins": [
+        "AC_IN",
+        "DC_OUT_GEV",
+        "GND_REF",
+        "SYNC_TRG"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Giga-Electronvolt+Cockcroft-Walton+Pulse+Stack&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://imgs.search.brave.com/ONy6CwepHERVgcJlyXd_F5F3dql6L3wF-UCK0CPX5HE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/c2xpZGVzaGFyZWNk/bi5jb20vc3NfdGh1/bWJuYWlscy9odnBz/cG1vZHVsZTJzazI1/LTI1MDUxOTEzNTMw/Ni02OTQyMTg5NS10/aHVtYm5haWwuanBn/P3dpZHRoPTYwMG91/bmRzJndpZHRoPTU2/MCZmaXQ9Ym91bmRz",
+      "boundingBox": {
+        "width": 100,
+        "height": 150,
+        "depth": 100
+      },
+      "position3d": {
+        "x": -120,
+        "y": 200,
+        "z": -120
+      }
+    },
+    {
+      "id": "cf252_feedstock",
+      "name": "Cf-252 Source Pellet",
+      "productName": "Californium-252 Isotopic Source",
+      "category": "electrical",
+      "type": "other",
+      "quantity": 1,
+      "estimatedCost": 25000,
+      "purchaseUrl": "https://www.google.com/search?q=Californium-252+neutron+source",
+      "description": "Neutron-rich transuranic feedstock for nucleosynthesis experiments.",
+      "pins": [
+        "ION_GND"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Californium-252+Isotopic+Source&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/5159AHq3RuL._SL500_.jpg"
+    },
+    {
+      "id": "radiation_monitor_geiger",
+      "name": "Gamma/Neutron Flux Monitor",
+      "productName": "LND 712 Geiger-Muller Tube and Driver",
+      "category": "electrical",
+      "type": "sensor",
+      "quantity": 2,
+      "estimatedCost": 120,
+      "purchaseUrl": "https://www.google.com/search?q=LND+712+geiger+muller+sensor",
+      "pins": [
+        "VCC",
+        "GND",
+        "PULSE_OUT"
+      ],
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=LND+712+Geiger-Muller+Tube+and+Driver&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "imageUrl": "https://m.media-amazon.com/images/I/21kyGhjRlxL._SL500_.jpg",
+      "boundingBox": {
+        "width": 40,
+        "height": 20,
+        "depth": 40
+      },
+      "position3d": {
+        "x": 180,
+        "y": 200,
+        "z": 180
+      }
+    },
+    {
+      "id": "lead_glass_viewport",
+      "name": "Radiation Shielded Viewport",
+      "productName": "High-Lead Content Observation Glass",
+      "category": "mechanical",
+      "type": "enclosure",
+      "quantity": 1,
+      "estimatedCost": 450,
+      "purchaseUrl": "https://www.google.com/search?q=lead+glass+radiation+shielding+window",
+      "description": "Provides safe visual monitoring of the plasma chamber while blocking gamma radiation.",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=High-Lead+Content+Observation+Glass&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "boundingBox": {
+        "width": 100,
+        "height": 10,
+        "depth": 100
+      },
+      "position3d": {
+        "x": 0,
+        "y": 200,
+        "z": 150
+      }
+    }
+  ],
+  "notes": [
+    "blue red purple refractory",
+    "permanent pigment generator",
+    "sustainable natural materials",
+    "matryoshka nested chambers",
+    "tesseract structural frame",
+    "self-referential memory system",
+    "energy-flow throttling"
+  ],
+  "projectName": "Atomic Pigment Synthesizer",
+  "mechLayoutHash": "accelerator_mount:3d_printed:,alumina_ceramic_crucible:mechanism:40x40x50mm,arcsync_reactor:module:,argon_manifold_mount:3d_printed:45x45x30mm,argon_solenoid_valve:actuator:64x30x45mm,ball_mill_stepper:actuator:42x42x40mm,borated_polyethylene_liner:enclosure:,can-transceiver-01:module:,coulombus_barrier_chamber:mechanism:,degenerate_stabilizer_coils:actuator:,em_shielding_enclosure:enclosure:,esp32_control_mount:3d_printed:80x60x15mm,feedstock_injector:actuator:,flux_monitor_hall:sensor:,gev_multiplier_stack:module:,harmonic_oscillator_432hz:sensor:,high_current_ion_source:module:,high_power_rf_amplifier:power:,high_voltage_generator:module:65x24x22mm,hv_relay:module:,hv_separator_insulator:3d_printed:50x50x120mm,induction_heater_module:actuator:55x40x35mm,ionic_steering_coils:actuator:,isotropic_field_core:actuator:,lead_glass_viewport:enclosure:,lead_shielding_enclosure:enclosure:,linear_rail_axis:mechanism:200x12x8mm,ln2_cooling_jacket:mechanism:,logic-level-shifter-i2c:module:,logic-level-shifter-spi:module:,magnetic_coil_housing:3d_printed:100x100x60mm,magnetic_field_h_bridge:module:43x43x27mm,main_controller_esp32:mcu:48x28x12mm,main_power_supply:power:199x98x42mm,matryoshka_inner_thermal_chamber:3d_printed:150x150x150mm,matryoshka_outer_shell:3d_printed:300x300x300mm,mini_electrostatic_accelerator:module:,mini_vacuum_pump:actuator:,mosfet_argon_driver:module:,neural_matrix_controller:mcu:,phase_locked_loop_controller:module:,planetary_gear_set:mechanism:50x50x15mm,planetary_mill_base:3d_printed:200x200x20mm,power_dist_block:module:,precision_timing_module:sensor:,quantum_state_interferometer:sensor:,radiation_monitor_geiger:sensor:,resonance_capacitor_bank:module:,resonate_particle_chronograph:sensor:,sic_h_bridge_pro:module:,spacetime_metric_modulator:module:,status_display:display:35x33x4mm,stepper_driver_module:module:20x15x11mm,stepper_driver_module_mount:3d_printed:50x40x12mm,tesseract_outer_frame:structural:400x400x400mm,thermocouple_sensor:sensor:20x20x3mm,thermocouple_sensor_mount:3d_printed:30x30x15mm,toroidal_flux_sensors:sensor:,ui_bezel_mount:3d_printed:100x80x20mm,ultrasonic_driver_array:actuator:,vacuum_chamber_port:mechanism:,vacuum_pressure_sensor:sensor:,via_coil_drivers:module:,vibranium_alloy_chassis:enclosure:::accelerator_mount|matryoshka_inner_thermal_chamber;alumina_ceramic_crucible|linear_rail_axis;arcsync_reactor|tesseract_outer_frame;arcsync_reactor|vibranium_alloy_chassis;argon_manifold_mount|argon_solenoid_valve;argon_manifold_mount|tesseract_outer_frame;ball_mill_stepper|planetary_mill_base;borated_polyethylene_liner|lead_shielding_enclosure;coulombus_barrier_chamber|isotropic_field_core;coulombus_barrier_chamber|matryoshka_inner_thermal_chamber;degenerate_stabilizer_coils|vibranium_alloy_chassis;em_shielding_enclosure|tesseract_outer_frame;esp32_control_mount|main_controller_esp32;esp32_control_mount|tesseract_outer_frame;feedstock_injector|arcsync_reactor;gev_multiplier_stack|vibranium_alloy_chassis;high_current_ion_source|mini_electrostatic_accelerator;high_power_rf_amplifier|vibranium_alloy_chassis;hv_separator_insulator|high_voltage_generator;hv_separator_insulator|tesseract_outer_frame;ionic_steering_coils|resonate_particle_chronograph;lead_glass_viewport|vibranium_alloy_chassis;lead_shielding_enclosure|tesseract_outer_frame;linear_rail_axis|matryoshka_outer_shell;ln2_cooling_jacket|vibranium_alloy_chassis;magnetic_coil_housing|magnetic_field_h_bridge;magnetic_coil_housing|matryoshka_inner_thermal_chamber;matryoshka_inner_thermal_chamber|induction_heater_module;matryoshka_inner_thermal_chamber|matryoshka_outer_shell;matryoshka_outer_shell|main_power_supply;matryoshka_outer_shell|tesseract_outer_frame;mini_electrostatic_accelerator|accelerator_mount;mini_vacuum_pump|tesseract_outer_frame;neural_matrix_controller|esp32_control_mount;phase_locked_loop_controller|esp32_control_mount;planetary_gear_set|planetary_mill_base;planetary_mill_base|ball_mill_stepper;planetary_mill_base|tesseract_outer_frame;precision_timing_module|esp32_control_mount;quantum_state_interferometer|vibranium_alloy_chassis;radiation_monitor_geiger|tesseract_outer_frame;resonance_capacitor_bank|tesseract_outer_frame;resonate_particle_chronograph|em_shielding_enclosure;sic_h_bridge_pro|tesseract_outer_frame;spacetime_metric_modulator|tesseract_outer_frame;stepper_driver_module_mount|stepper_driver_module;stepper_driver_module_mount|tesseract_outer_frame;thermocouple_sensor_mount|matryoshka_inner_thermal_chamber;thermocouple_sensor_mount|thermocouple_sensor;toroidal_flux_sensors|vibranium_alloy_chassis;ui_bezel_mount|matryoshka_outer_shell;ui_bezel_mount|status_display;ultrasonic_driver_array|resonate_particle_chronograph;vacuum_chamber_port|matryoshka_outer_shell;vacuum_pressure_sensor|vacuum_chamber_port;vibranium_alloy_chassis|tesseract_outer_frame",
+  "originalPrompt": "A device that creates completely new permanent pigment which has a blue red and purple wavelength of refractory when embedded in glass or other projects made of sustainable all natural materials this way",
+  "instructionSteps": [
+    {
+      "id": "fabricate",
+      "subSteps": [
+        {
+          "id": "fabricate_1",
+          "title": "Print Matryoshka chambers and structural mounts",
+          "partIds": [
+            "matryoshka_outer_shell",
+            "matryoshka_inner_thermal_chamber",
+            "esp32_control_mount",
+            "argon_manifold_mount"
+          ]
+        },
+        {
+          "id": "fabricate_2",
+          "title": "Print high-voltage and magnetic housings",
+          "partIds": [
+            "hv_separator_insulator",
+            "magnetic_coil_housing",
+            "accelerator_mount",
+            "stepper_driver_module_mount"
+          ]
+        },
+        {
+          "id": "fabricate_3",
+          "title": "Prepare Tesseract frame and planetary mill base",
+          "partIds": [
+            "tesseract_outer_frame",
+            "planetary_mill_base",
+            "planetary_gear_set"
+          ]
+        },
+        {
+          "id": "fabricate_4",
+          "title": "Install thermal standoffs and reactor chassis liners",
+          "partIds": [
+            "high_temp_ceramic_standoffs",
+            "borated_polyethylene_liner",
+            "vibranium_alloy_chassis"
+          ]
+        },
+        {
+          "id": "fabricate_5",
+          "title": "Apply epoxy seals to vacuum and cooling interfaces",
+          "partIds": [
+            "vacuum_chamber_port",
+            "ln2_cooling_jacket",
+            "lead_glass_viewport"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wire",
+      "subSteps": [
+        {
+          "id": "wire_1",
+          "title": "Configure main power distribution and regulation rails",
+          "partIds": [
+            "main_power_supply",
+            "power_dist_block",
+            "hv_relay"
+          ]
+        },
+        {
+          "id": "wire_2",
+          "title": "Wire primary and neural matrix controllers",
+          "partIds": [
+            "main_controller_esp32",
+            "neural_matrix_controller",
+            "can-transceiver-01",
+            "logic-level-shifter-i2c",
+            "logic-level-shifter-spi"
+          ]
+        },
+        {
+          "id": "wire_3",
+          "title": "Connect motor drivers and solenoid actuators",
+          "partIds": [
+            "stepper_driver_module",
+            "ball_mill_stepper",
+            "mosfet_argon_driver",
+            "argon_solenoid_valve"
+          ]
+        },
+        {
+          "id": "wire_4",
+          "title": "Integrate high-voltage and induction systems",
+          "partIds": [
+            "high_voltage_generator",
+            "induction_heater_module",
+            "sic_h_bridge_pro",
+            "resonance_capacitor_bank"
+          ]
+        },
+        {
+          "id": "wire_5",
+          "title": "Wire particle monitoring and timing sensors",
+          "partIds": [
+            "resonate_particle_chronograph",
+            "precision_timing_module",
+            "quantum_state_interferometer",
+            "radiation_monitor_geiger"
+          ]
+        },
+        {
+          "id": "wire_6",
+          "title": "Establish RF and metric modulation signal paths",
+          "partIds": [
+            "high_power_rf_amplifier",
+            "phase_locked_loop_controller",
+            "spacetime_metric_modulator",
+            "arcsync_reactor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bringup",
+      "subSteps": [
+        {
+          "id": "bringup_1",
+          "title": "Verify I2C/SPI bus integrity and level shifting",
+          "partIds": [
+            "main_controller_esp32",
+            "status_display",
+            "thermocouple_sensor"
+          ]
+        },
+        {
+          "id": "bringup_2",
+          "title": "Calibrate vacuum and gas flow feedback loops",
+          "partIds": [
+            "vacuum_pressure_sensor",
+            "mini_vacuum_pump",
+            "argon_solenoid_valve"
+          ]
+        },
+        {
+          "id": "bringup_3",
+          "title": "Test CAN bus communication between controllers",
+          "partIds": [
+            "main_controller_esp32",
+            "neural_matrix_controller",
+            "can-transceiver-01"
+          ]
+        },
+        {
+          "id": "bringup_4",
+          "title": "Perform low-power test of H-Bridge and magnetic coils",
+          "partIds": [
+            "magnetic_field_h_bridge",
+            "ionic_steering_coils",
+            "toroidal_flux_sensors"
+          ]
+        },
+        {
+          "id": "bringup_5",
+          "title": "Verify timing sync and RF phase locking",
+          "partIds": [
+            "precision_timing_module",
+            "phase_locked_loop_controller",
+            "harmonic_oscillator_432hz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "assemble",
+      "subSteps": [
+        {
+          "id": "assemble_1",
+          "title": "Mount core reactor and shield assemblies to Tesseract frame",
+          "partIds": [
+            "vibranium_alloy_chassis",
+            "lead_shielding_enclosure",
+            "tesseract_outer_frame"
+          ]
+        },
+        {
+          "id": "assemble_2",
+          "title": "Install Matryoshka nested chambers and crucible rail",
+          "partIds": [
+            "matryoshka_outer_shell",
+            "matryoshka_inner_thermal_chamber",
+            "linear_rail_axis",
+            "alumina_ceramic_crucible"
+          ]
+        },
+        {
+          "id": "assemble_3",
+          "title": "Position particle accelerator and ion source",
+          "partIds": [
+            "mini_electrostatic_accelerator",
+            "high_current_ion_source",
+            "cf252_feedstock"
+          ]
+        },
+        {
+          "id": "assemble_4",
+          "title": "Finalize planetary mill and actuator integration",
+          "partIds": [
+            "planetary_mill_base",
+            "ball_mill_stepper",
+            "ultrasonic_driver_array"
+          ]
+        },
+        {
+          "id": "assemble_5",
+          "title": "Secure UI bezel and perform system shielding check",
+          "partIds": [
+            "ui_bezel_mount",
+            "status_display",
+            "em_shielding_enclosure"
+          ]
+        }
+      ]
+    }
+  ],
+  "wiringCleanedHash": "8082a9ad-beb8-4dc3-8438-4c67e99c153b::arcsync_reactor:P_IN|P_OUT|SYNC_IN|GND|VCC,argon_solenoid_valve:POS|NEG,ball_mill_stepper:A+|A-|B+|B-,can-transceiver-01:TXD|RXD|CANH|CANL|VCC|GND,cf252_feedstock:ION_GND,degenerate_stabilizer_coils:POS|NEG,feedstock_injector:VCC|GND|SIGNAL_IN,flux_monitor_hall:VCC|GND|OUT,gev_multiplier_stack:AC_IN|DC_OUT_GEV|GND_REF|SYNC_TRG,harmonic_oscillator_432hz:VCC|GND|OUT,high_current_ion_source:VCC|GND|RF_IN|GAS_IN|ION_OUT|CTRL,high_power_rf_amplifier:VCC_48V|GND|RF_IN|RF_OUT|ENABLE,high_voltage_generator:V_IN+|V_IN-|HV_OUT+|HV_OUT-,hv_relay:IN|GND|COM|NO,induction_heater_module:V+|V-|COIL_A|COIL_B,ionic_steering_coils:COIL_A_POS|COIL_A_NEG|COIL_B_POS|COIL_B_NEG,isotropic_field_core:COIL_IN_A|COIL_OUT_A|COIL_IN_B|COIL_OUT_B,logic-level-shifter-i2c:LV1|LV2|HV1|HV2|LV|HV|GND,logic-level-shifter-spi:LV1|LV2|LV3|LV4|HV1|HV2|HV3|HV4|LV|HV|GND,magnetic_field_h_bridge:ENA|IN1|IN2|IN3|IN4|ENB|OUT1|OUT2|OUT3|OUT4|12V|GND|5V,main_controller_esp32:EN|VP|VN|D34|D35|D32|D33|D25|D26|D27|D14|D12|D13|GND|VCC|D23|D22|TX0|RX0|D21|D19|D18|D5|D17|D16|D4|D2|D15|SDA|SCL|SCK|MISO|MOSI,main_power_supply:L|N|G|V+|V+|V-|V-,mini_electrostatic_accelerator:VCC|GND|CTRL_PWM|ENABLE|ION_SOURCE_POS,mini_vacuum_pump:POS|NEG,mosfet_argon_driver:GATE|DRAIN|SOURCE,neural_matrix_controller:VCC|GND|CAN_H|CAN_L|I2C_SDA|I2C_SCL|PWM_0|PWM_1|GPIO_SYNC,phase_locked_loop_controller:VCC|GND|R_IN|RF_OUT|DATA|CLK|LE,power_dist_block:V_IN|V24_OUT|V12_OUT|V5_OUT|GND|V3.3_OUT,precision_timing_module:VCC|GND|10MHZ_OUT|RS232_TX|RS232_RX,quantum_state_interferometer:VCC|GND|SDA|SCL|SYNC,radiation_monitor_geiger:VCC|GND|PULSE_OUT,resonance_capacitor_bank:POS|NEG,resonate_particle_chronograph:VCC|GND|RX|TX|LASER_PWM|TRIG,sic_h_bridge_pro:PWM_L|PWM_R|EN|VCC|GND|B_POS|B_NEG|OUT_A|OUT_B,spacetime_metric_modulator:SYNC_OUT|SIGNAL_OUT|CH1|GND,status_display:VCC|GND|SCL|SDA,stepper_driver_module:ENABLE|MS1|MS2|MS3|RESET|SLEEP|STEP|DIR|VMOT|GND|VCC|1A|1B|2A|2B,thermocouple_sensor:VCC|GND|SCK|CS|SO|T+|T-|MOSI,toroidal_flux_sensors:VCC|GND|OUT|SCL|SDA,ultrasonic_driver_array:VCC|GND|OSC_1|OSC_2|OSC_3,vacuum_pressure_sensor:VCC|GND|OUT,via_coil_drivers:+Vs| -Vs|OUT|IN_POS|IN_NEG|GND::data|flux_monitor_hall|OUT|main_controller_esp32|VN||analog_0-5V;data|logic-level-shifter-i2c|HV1|status_display|SCL|i2c|;data|logic-level-shifter-i2c|HV2|status_display|SDA|i2c|;data|logic-level-shifter-spi|HV3|thermocouple_sensor|CS||5V;data|logic-level-shifter-spi|HV4|thermocouple_sensor|SCK||5V;data|main_controller_esp32|D12|stepper_driver_module|STEP|gpio|;data|main_controller_esp32|D12|stepper_driver_module|STEP||3.3V;data|main_controller_esp32|D13|mosfet_argon_driver|GATE|gpio|;data|main_controller_esp32|D14|stepper_driver_module|DIR|gpio|;data|main_controller_esp32|D14|stepper_driver_module|DIR||3.3V;data|main_controller_esp32|D15|ultrasonic_driver_array|OSC_2||3.3V;data|main_controller_esp32|D16|resonate_particle_chronograph|RX|uart|;data|main_controller_esp32|D17|resonate_particle_chronograph|TX|uart|;data|main_controller_esp32|D18|logic-level-shifter-spi|LV1||3.3V;data|main_controller_esp32|D21|can-transceiver-01|TXD|uart|;data|main_controller_esp32|D22|can-transceiver-01|RXD|uart|;data|main_controller_esp32|D25|magnetic_field_h_bridge|IN1|pwm|;data|main_controller_esp32|D26|magnetic_field_h_bridge|IN2|pwm|;data|main_controller_esp32|D27|sic_h_bridge_pro|PWM_R||3.3V;data|main_controller_esp32|D2|ultrasonic_driver_array|OSC_1||3.3V;data|main_controller_esp32|D32|hv_relay|IN||3.3V;data|main_controller_esp32|D33|sic_h_bridge_pro|PWM_L||3.3V;data|main_controller_esp32|D34|vacuum_pressure_sensor|OUT||3.3V (via divider);data|main_controller_esp32|D4|resonate_particle_chronograph|LASER_PWM||3.3V;data|main_controller_esp32|D5|logic-level-shifter-spi|LV3||3.3V;data|main_controller_esp32|MISO|thermocouple_sensor|SO||3.3V/5V (check shifter logic note: MISO is slave-to-master, typically 5V to 3.3V divider or shifter needed but direct 3.3V logic often used for MISO if sensor is 3.3V compatible; keeping standard SPI direct path logic for return data line based on component context provided.);data|main_controller_esp32|MOSI|logic-level-shifter-spi|LV2||3.3V;data|main_controller_esp32|SCK|logic-level-shifter-spi|LV4||3.3V;data|main_controller_esp32|SCL|logic-level-shifter-i2c|LV1|i2c|;data|main_controller_esp32|SDA|logic-level-shifter-i2c|LV2|i2c|;data|neural_matrix_controller|CAN_H|can-transceiver-01|CANH||3.3V;data|neural_matrix_controller|CAN_L|can-transceiver-01|CANL||3.3V;data|neural_matrix_controller|GPIO_SYNC|phase_locked_loop_controller|LE||3.3V;data|neural_matrix_controller|I2C_SCL|quantum_state_interferometer|SCL||3.3V;data|neural_matrix_controller|I2C_SCL|toroidal_flux_sensors|SCL|i2c|;data|neural_matrix_controller|I2C_SDA|quantum_state_interferometer|SDA||3.3V;data|neural_matrix_controller|I2C_SDA|toroidal_flux_sensors|SDA|i2c|;data|neural_matrix_controller|PWM_0|high_current_ion_source|CTRL||3.3V;data|neural_matrix_controller|PWM_0|phase_locked_loop_controller|DATA||3.3V;data|neural_matrix_controller|PWM_0|via_coil_drivers|IN_POS||3.3V;data|neural_matrix_controller|PWM_1|feedstock_injector|SIGNAL_IN||3.3V;data|neural_matrix_controller|PWM_1|gev_multiplier_stack|SYNC_TRG||3.3V;data|neural_matrix_controller|PWM_1|via_coil_drivers|IN_NEG||3.3V;data|phase_locked_loop_controller|RF_OUT|high_power_rf_amplifier|RF_IN||Variable;data|precision_timing_module|10MHZ_OUT|phase_locked_loop_controller|R_IN||3.3V;data|radiation_monitor_geiger|PULSE_OUT|neural_matrix_controller|GPIO_SYNC||3.3V;data|resonate_particle_chronograph|TRIG|mini_electrostatic_accelerator|CTRL_PWM||3.3V;data|spacetime_metric_modulator|CH1|sic_h_bridge_pro|EN||5V;data|spacetime_metric_modulator|SIGNAL_OUT|arcsync_reactor|SYNC_IN||5V;data|spacetime_metric_modulator|SYNC_OUT|gev_multiplier_stack|SYNC_TRG||5V;data|spacetime_metric_modulator|SYNC_OUT|neural_matrix_controller|GPIO_SYNC||5V;power|arcsync_reactor|P_OUT|isotropic_field_core|COIL_IN_B||10kV;power|can-transceiver-01|GND|power_dist_block|GND||0V;power|can-transceiver-01|VCC|power_dist_block|V5_OUT||5V;power|cf252_feedstock|ION_GND|high_current_ion_source|GND||0V;power|gev_multiplier_stack|DC_OUT_GEV|mini_electrostatic_accelerator|ION_SOURCE_POS||1.2GV;power|gev_multiplier_stack|GND_REF|mini_electrostatic_accelerator|GND||;power|high_power_rf_amplifier|GND|degenerate_stabilizer_coils|NEG||;power|high_power_rf_amplifier|RF_OUT|degenerate_stabilizer_coils|POS||48V AC Pulse;power|hv_relay|GND|high_voltage_generator|V_IN-||;power|hv_relay|NO|high_voltage_generator|V_IN+||12V;power|magnetic_field_h_bridge|OUT3|ionic_steering_coils|COIL_A_POS||12V;power|magnetic_field_h_bridge|OUT4|ionic_steering_coils|COIL_A_NEG||12V;power|main_controller_esp32|GND|can-transceiver-01|GND||;power|main_controller_esp32|GND|thermocouple_sensor|GND||;power|main_power_supply|V+|power_dist_block|V_IN||24V;power|main_power_supply|V-|argon_solenoid_valve|NEG||;power|main_power_supply|V-|high_voltage_generator|V_IN-||;power|main_power_supply|V-|induction_heater_module|V-||;power|main_power_supply|V-|magnetic_field_h_bridge|GND||;power|main_power_supply|V-|main_controller_esp32|GND||;power|main_power_supply|V-|mini_vacuum_pump|NEG||;power|main_power_supply|V-|power_dist_block|GND||;power|main_power_supply|V-|resonate_particle_chronograph|GND||;power|main_power_supply|V-|status_display|GND||;power|main_power_supply|V-|stepper_driver_module|GND||;power|mosfet_argon_driver|DRAIN|argon_solenoid_valve|NEG||12V;power|power_dist_block|GND|arcsync_reactor|GND||;power|power_dist_block|GND|argon_solenoid_valve|NEG||;power|power_dist_block|GND|flux_monitor_hall|GND||;power|power_dist_block|GND|harmonic_oscillator_432hz|GND||;power|power_dist_block|GND|high_power_rf_amplifier|GND||;power|power_dist_block|GND|hv_relay|GND||;power|power_dist_block|GND|induction_heater_module|V-||;power|power_dist_block|GND|logic-level-shifter-i2c|GND||;power|power_dist_block|GND|logic-level-shifter-spi|GND||;power|power_dist_block|GND|magnetic_field_h_bridge|GND||;power|power_dist_block|GND|main_controller_esp32|GND||;power|power_dist_block|GND|mini_electrostatic_accelerator|GND||;power|power_dist_block|GND|mini_vacuum_pump|NEG||;power|power_dist_block|GND|neural_matrix_controller|GND||;power|power_dist_block|GND|precision_timing_module|GND||;power|power_dist_block|GND|quantum_state_interferometer|GND||;power|power_dist_block|GND|radiation_monitor_geiger|GND||;power|power_dist_block|GND|resonate_particle_chronograph|GND||;power|power_dist_block|GND|sic_h_bridge_pro|B_NEG||;power|power_dist_block|GND|status_display|GND||;power|power_dist_block|GND|stepper_driver_module|GND||;power|power_dist_block|GND|stepper_driver_module|GND||;power|power_dist_block|GND|thermocouple_sensor|GND||0V;power|power_dist_block|GND|toroidal_flux_sensors|GND||;power|power_dist_block|GND|ultrasonic_driver_array|GND||;power|power_dist_block|GND|vacuum_pressure_sensor|GND||;power|power_dist_block|GND|via_coil_drivers|GND||;power|power_dist_block|V12_OUT|arcsync_reactor|VCC||12V;power|power_dist_block|V12_OUT|argon_solenoid_valve|POS||12V;power|power_dist_block|V12_OUT|hv_relay|COM||12V;power|power_dist_block|V12_OUT|magnetic_field_h_bridge|12V||12V;power|power_dist_block|V12_OUT|mini_electrostatic_accelerator|VCC||12V;power|power_dist_block|V12_OUT|mini_vacuum_pump|POS||12V;power|power_dist_block|V12_OUT|mosfet_argon_driver|SOURCE||12V;power|power_dist_block|V12_OUT|neural_matrix_controller|VCC||12V;power|power_dist_block|V12_OUT|resonate_particle_chronograph|VCC||12V;power|power_dist_block|V12_OUT|stepper_driver_module|VMOT||12V;power|power_dist_block|V12_OUT|stepper_driver_module|VMOT||12V;power|power_dist_block|V12_OUT|ultrasonic_driver_array|VCC||12V;power|power_dist_block|V24_OUT|high_power_rf_amplifier|VCC_48V||48V (via boost);power|power_dist_block|V24_OUT|induction_heater_module|V+||24V;power|power_dist_block|V24_OUT|sic_h_bridge_pro|B_POS||24V;power|power_dist_block|V24_OUT|via_coil_drivers|+Vs||24V;power|power_dist_block|V3.3_OUT|harmonic_oscillator_432hz|VCC||3.3V;power|power_dist_block|V3.3_OUT|precision_timing_module|VCC||3.3V;power|power_dist_block|V3.3_OUT|thermocouple_sensor|VCC||3.3V;power|power_dist_block|V5_OUT|flux_monitor_hall|VCC||5V;power|power_dist_block|V5_OUT|logic-level-shifter-i2c|HV||5V;power|power_dist_block|V5_OUT|logic-level-shifter-i2c|LV||3.3V;power|power_dist_block|V5_OUT|logic-level-shifter-spi|HV||5V;power|power_dist_block|V5_OUT|logic-level-shifter-spi|LV||3.3V;power|power_dist_block|V5_OUT|main_controller_esp32|VCC||5V;power|power_dist_block|V5_OUT|quantum_state_interferometer|VCC||5V;power|power_dist_block|V5_OUT|radiation_monitor_geiger|VCC||5V;power|power_dist_block|V5_OUT|status_display|VCC||5V;power|power_dist_block|V5_OUT|toroidal_flux_sensors|VCC||5V;power|power_dist_block|V5_OUT|vacuum_pressure_sensor|VCC||5V;power|sic_h_bridge_pro|B_NEG|resonance_capacitor_bank|NEG||;power|sic_h_bridge_pro|B_POS|resonance_capacitor_bank|POS||24V;power|stepper_driver_module|1A|ball_mill_stepper|A+||12V;power|stepper_driver_module|1B|ball_mill_stepper|A-||12V;power|stepper_driver_module|2A|ball_mill_stepper|B+||12V;power|stepper_driver_module|2B|ball_mill_stepper|B-||12V;power|via_coil_drivers|OUT|isotropic_field_core|COIL_IN_A||Variable High Current",
+  "projectDescription": "This tesseract-framed synthesizer produces permanent refractory pigments through high-energy nucleosynthesis. It utilizes a Jetson-driven ArcSync reactor, miniature particle accelerator, and induction-heated matryoshka chambers to transmute natural feedstocks within a 432Hz modulated magnetic field, governed by a neural matrix controller for precise isotopic stabilization.",
+  "instructionPreamble": {
+    "tools": [
+      "3D printer (ABS, PETG, Nylon capable)",
+      "Soldering iron and lead-free solder",
+      "M2, M3, M4, M5, and M6 hex key sets",
+      "Wire strippers and crimping tool",
+      "Multimeter",
+      "Epoxy resin and thermal adhesive",
+      "Vacuum grease and KF25 flange clamps",
+      "Heat gun for shrink tubing"
+    ],
+    "assumptions": [
+      "Access to a high-temperature enclosed 3D printing environment",
+      "Experience handling high-voltage and vacuum systems",
+      "Firmware development environment (PlatformIO or Arduino IDE) configured",
+      "Safety protocols for handling ion sources and radioactive feedstock active"
+    ]
+  },
+  "electricalConnections": [
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "stepper_driver_module",
+      "protocol": "gpio",
+      "sourcePin": "D12",
+      "targetPin": "STEP"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "stepper_driver_module",
+      "protocol": "gpio",
+      "sourcePin": "D14",
+      "targetPin": "DIR"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "magnetic_field_h_bridge",
+      "protocol": "pwm",
+      "sourcePin": "D25",
+      "targetPin": "IN1"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "magnetic_field_h_bridge",
+      "protocol": "pwm",
+      "sourcePin": "D26",
+      "targetPin": "IN2"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "induction_heater_module",
+      "voltage": "24V",
+      "sourcePin": "V24_OUT",
+      "targetPin": "V+"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "magnetic_field_h_bridge",
+      "voltage": "12V",
+      "sourcePin": "V12_OUT",
+      "targetPin": "12V"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "stepper_driver_module",
+      "voltage": "12V",
+      "sourcePin": "V12_OUT",
+      "targetPin": "VMOT"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "hv_relay",
+      "voltage": "12V",
+      "sourcePin": "V12_OUT",
+      "targetPin": "COM"
+    },
+    {
+      "type": "power",
+      "source": "hv_relay",
+      "target": "high_voltage_generator",
+      "voltage": "12V",
+      "sourcePin": "NO",
+      "targetPin": "V_IN+"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "hv_relay",
+      "voltage": "3.3V",
+      "sourcePin": "D32",
+      "targetPin": "IN"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "main_controller_esp32",
+      "voltage": "5V",
+      "sourcePin": "V5_OUT",
+      "targetPin": "VCC"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "resonate_particle_chronograph",
+      "voltage": "12V",
+      "sourcePin": "V12_OUT",
+      "targetPin": "VCC"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "ultrasonic_driver_array",
+      "voltage": "12V",
+      "sourcePin": "V12_OUT",
+      "targetPin": "VCC"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "resonate_particle_chronograph",
+      "voltage": "3.3V",
+      "sourcePin": "D4",
+      "targetPin": "LASER_PWM"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "ultrasonic_driver_array",
+      "voltage": "3.3V",
+      "sourcePin": "D2",
+      "targetPin": "OSC_1"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "ultrasonic_driver_array",
+      "voltage": "3.3V",
+      "sourcePin": "D15",
+      "targetPin": "OSC_2"
+    },
+    {
+      "type": "power",
+      "source": "magnetic_field_h_bridge",
+      "target": "ionic_steering_coils",
+      "voltage": "12V",
+      "sourcePin": "OUT3",
+      "targetPin": "COIL_A_POS"
+    },
+    {
+      "type": "power",
+      "source": "magnetic_field_h_bridge",
+      "target": "ionic_steering_coils",
+      "voltage": "12V",
+      "sourcePin": "OUT4",
+      "targetPin": "COIL_A_NEG"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "induction_heater_module",
+      "sourcePin": "GND",
+      "targetPin": "V-"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "magnetic_field_h_bridge",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "stepper_driver_module",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "hv_relay",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "hv_relay",
+      "target": "high_voltage_generator",
+      "sourcePin": "GND",
+      "targetPin": "V_IN-"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "main_controller_esp32",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "resonate_particle_chronograph",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "ultrasonic_driver_array",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "resonate_particle_chronograph",
+      "protocol": "uart",
+      "sourcePin": "D17",
+      "targetPin": "TX"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "resonate_particle_chronograph",
+      "protocol": "uart",
+      "sourcePin": "D16",
+      "targetPin": "RX"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "mosfet_argon_driver",
+      "protocol": "gpio",
+      "sourcePin": "D13",
+      "targetPin": "GATE"
+    },
+    {
+      "type": "power",
+      "source": "stepper_driver_module",
+      "target": "ball_mill_stepper",
+      "voltage": "12V",
+      "sourcePin": "1A",
+      "targetPin": "A+"
+    },
+    {
+      "type": "power",
+      "source": "stepper_driver_module",
+      "target": "ball_mill_stepper",
+      "voltage": "12V",
+      "sourcePin": "1B",
+      "targetPin": "A-"
+    },
+    {
+      "type": "power",
+      "source": "stepper_driver_module",
+      "target": "ball_mill_stepper",
+      "voltage": "12V",
+      "sourcePin": "2A",
+      "targetPin": "B+"
+    },
+    {
+      "type": "power",
+      "source": "stepper_driver_module",
+      "target": "ball_mill_stepper",
+      "voltage": "12V",
+      "sourcePin": "2B",
+      "targetPin": "B-"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "stepper_driver_module",
+      "voltage": "12V",
+      "sourcePin": "V12_OUT",
+      "targetPin": "VMOT"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "stepper_driver_module",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "stepper_driver_module",
+      "voltage": "3.3V",
+      "sourcePin": "D12",
+      "targetPin": "STEP"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "stepper_driver_module",
+      "voltage": "3.3V",
+      "sourcePin": "D14",
+      "targetPin": "DIR"
+    },
+    {
+      "type": "power",
+      "source": "mosfet_argon_driver",
+      "target": "argon_solenoid_valve",
+      "voltage": "12V",
+      "sourcePin": "DRAIN",
+      "targetPin": "NEG"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "mosfet_argon_driver",
+      "voltage": "12V",
+      "sourcePin": "V12_OUT",
+      "targetPin": "SOURCE"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "mini_vacuum_pump",
+      "voltage": "12V",
+      "sourcePin": "V12_OUT",
+      "targetPin": "POS"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "vacuum_pressure_sensor",
+      "voltage": "5V",
+      "sourcePin": "V5_OUT",
+      "targetPin": "VCC"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "vacuum_pressure_sensor",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "vacuum_pressure_sensor",
+      "voltage": "3.3V (via divider)",
+      "sourcePin": "D34",
+      "targetPin": "OUT"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "mini_vacuum_pump",
+      "sourcePin": "GND",
+      "targetPin": "NEG"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "flux_monitor_hall",
+      "voltage": "5V",
+      "sourcePin": "V5_OUT",
+      "targetPin": "VCC"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "flux_monitor_hall",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "data",
+      "source": "flux_monitor_hall",
+      "target": "main_controller_esp32",
+      "voltage": "analog_0-5V",
+      "sourcePin": "OUT",
+      "targetPin": "VN"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "mini_electrostatic_accelerator",
+      "voltage": "12V",
+      "sourcePin": "V12_OUT",
+      "targetPin": "VCC"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "mini_electrostatic_accelerator",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "data",
+      "source": "logic-level-shifter-i2c",
+      "target": "status_display",
+      "protocol": "i2c",
+      "sourcePin": "HV1",
+      "targetPin": "SCL"
+    },
+    {
+      "type": "data",
+      "source": "logic-level-shifter-i2c",
+      "target": "status_display",
+      "protocol": "i2c",
+      "sourcePin": "HV2",
+      "targetPin": "SDA"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "arcsync_reactor",
+      "voltage": "12V",
+      "sourcePin": "V12_OUT",
+      "targetPin": "VCC"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "arcsync_reactor",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "main_power_supply",
+      "target": "argon_solenoid_valve",
+      "sourcePin": "V-",
+      "targetPin": "NEG"
+    },
+    {
+      "type": "power",
+      "source": "main_power_supply",
+      "target": "status_display",
+      "sourcePin": "V-",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "main_power_supply",
+      "target": "induction_heater_module",
+      "sourcePin": "V-",
+      "targetPin": "V-"
+    },
+    {
+      "type": "power",
+      "source": "main_power_supply",
+      "target": "magnetic_field_h_bridge",
+      "sourcePin": "V-",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "main_power_supply",
+      "target": "stepper_driver_module",
+      "sourcePin": "V-",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "main_power_supply",
+      "target": "high_voltage_generator",
+      "sourcePin": "V-",
+      "targetPin": "V_IN-"
+    },
+    {
+      "type": "power",
+      "source": "main_power_supply",
+      "target": "main_controller_esp32",
+      "sourcePin": "V-",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "main_power_supply",
+      "target": "resonate_particle_chronograph",
+      "sourcePin": "V-",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "main_power_supply",
+      "target": "power_dist_block",
+      "sourcePin": "V-",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "main_power_supply",
+      "target": "mini_vacuum_pump",
+      "sourcePin": "V-",
+      "targetPin": "NEG"
+    },
+    {
+      "type": "power",
+      "source": "main_power_supply",
+      "target": "power_dist_block",
+      "voltage": "24V",
+      "sourcePin": "V+",
+      "targetPin": "V_IN"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "status_display",
+      "voltage": "5V",
+      "sourcePin": "V5_OUT",
+      "targetPin": "VCC"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "argon_solenoid_valve",
+      "voltage": "12V",
+      "sourcePin": "V12_OUT",
+      "targetPin": "POS"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "logic-level-shifter-i2c",
+      "voltage": "5V",
+      "sourcePin": "V5_OUT",
+      "targetPin": "HV"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "logic-level-shifter-i2c",
+      "voltage": "3.3V",
+      "sourcePin": "V5_OUT",
+      "targetPin": "LV"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "logic-level-shifter-spi",
+      "voltage": "5V",
+      "sourcePin": "V5_OUT",
+      "targetPin": "HV"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "logic-level-shifter-spi",
+      "voltage": "3.3V",
+      "sourcePin": "V5_OUT",
+      "targetPin": "LV"
+    },
+    {
+      "type": "data",
+      "source": "resonate_particle_chronograph",
+      "target": "mini_electrostatic_accelerator",
+      "voltage": "3.3V",
+      "sourcePin": "TRIG",
+      "targetPin": "CTRL_PWM"
+    },
+    {
+      "type": "power",
+      "source": "arcsync_reactor",
+      "target": "isotropic_field_core",
+      "voltage": "10kV",
+      "sourcePin": "P_OUT",
+      "targetPin": "COIL_IN_B"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "status_display",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "argon_solenoid_valve",
+      "sourcePin": "GND",
+      "targetPin": "NEG"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "logic-level-shifter-i2c",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "logic-level-shifter-spi",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "sic_h_bridge_pro",
+      "voltage": "24V",
+      "sourcePin": "V24_OUT",
+      "targetPin": "B_POS"
+    },
+    {
+      "type": "power",
+      "source": "power_dist_block",
+      "target": "sic_h_bridge_pro",
+      "sourcePin": "GND",
+      "targetPin": "B_NEG"
+    },
+    {
+      "type": "power",
+      "source": "sic_h_bridge_pro",
+      "target": "resonance_capacitor_bank",
+      "voltage": "24V",
+      "sourcePin": "B_POS",
+      "targetPin": "POS"
+    },
+    {
+      "type": "power",
+      "source": "sic_h_bridge_pro",
+      "target": "resonance_capacitor_bank",
+      "sourcePin": "B_NEG",
+      "targetPin": "NEG"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "sic_h_bridge_pro",
+      "voltage": "3.3V",
+      "sourcePin": "D33",
+      "targetPin": "PWM_L"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "sic_h_bridge_pro",
+      "voltage": "3.3V",
+      "sourcePin": "D27",
+      "targetPin": "PWM_R"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "logic-level-shifter-i2c",
+      "protocol": "i2c",
+      "sourcePin": "SCL",
+      "targetPin": "LV1"
+    },
+    {
+      "type": "data",
+      "source": "main_controller_esp32",
+      "target": "logic-level-shifter-i2c",
+      "protocol": "i2c",
+      "sourcePin": "SDA",
+      "targetPin": "LV2"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "neural_matrix_controller",
+      "type": "power",
+      "sourcePin": "V12_OUT",
+      "targetPin": "VCC",
+      "voltage": "12V"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "via_coil_drivers",
+      "type": "data",
+      "sourcePin": "PWM_0",
+      "targetPin": "IN_POS",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "via_coil_drivers",
+      "target": "isotropic_field_core",
+      "type": "power",
+      "sourcePin": "OUT",
+      "targetPin": "COIL_IN_A",
+      "voltage": "Variable High Current"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "via_coil_drivers",
+      "type": "power",
+      "sourcePin": "V24_OUT",
+      "targetPin": "+Vs",
+      "voltage": "24V"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "toroidal_flux_sensors",
+      "type": "power",
+      "sourcePin": "V5_OUT",
+      "targetPin": "VCC",
+      "voltage": "5V"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "neural_matrix_controller",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "via_coil_drivers",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "toroidal_flux_sensors",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "source": "main_controller_esp32",
+      "target": "can-transceiver-01",
+      "type": "data",
+      "protocol": "uart",
+      "sourcePin": "D21",
+      "targetPin": "TXD"
+    },
+    {
+      "source": "main_controller_esp32",
+      "target": "can-transceiver-01",
+      "type": "data",
+      "protocol": "uart",
+      "sourcePin": "D22",
+      "targetPin": "RXD"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "toroidal_flux_sensors",
+      "type": "data",
+      "protocol": "i2c",
+      "sourcePin": "I2C_SCL",
+      "targetPin": "SCL"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "toroidal_flux_sensors",
+      "type": "data",
+      "protocol": "i2c",
+      "sourcePin": "I2C_SDA",
+      "targetPin": "SDA"
+    },
+    {
+      "source": "spacetime_metric_modulator",
+      "target": "arcsync_reactor",
+      "type": "data",
+      "sourcePin": "SIGNAL_OUT",
+      "targetPin": "SYNC_IN",
+      "voltage": "5V"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "via_coil_drivers",
+      "type": "data",
+      "sourcePin": "PWM_1",
+      "targetPin": "IN_NEG",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "quantum_state_interferometer",
+      "type": "power",
+      "sourcePin": "V5_OUT",
+      "targetPin": "VCC",
+      "voltage": "5V"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "quantum_state_interferometer",
+      "type": "data",
+      "sourcePin": "I2C_SDA",
+      "targetPin": "SDA",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "quantum_state_interferometer",
+      "type": "data",
+      "sourcePin": "I2C_SCL",
+      "targetPin": "SCL",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "harmonic_oscillator_432hz",
+      "type": "power",
+      "sourcePin": "V3.3_OUT",
+      "targetPin": "VCC",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "harmonic_oscillator_432hz",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "quantum_state_interferometer",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "thermocouple_sensor",
+      "type": "power",
+      "sourcePin": "V3.3_OUT",
+      "targetPin": "VCC",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "thermocouple_sensor",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND",
+      "voltage": "0V"
+    },
+    {
+      "source": "logic-level-shifter-spi",
+      "target": "thermocouple_sensor",
+      "type": "data",
+      "sourcePin": "HV3",
+      "targetPin": "CS",
+      "voltage": "5V"
+    },
+    {
+      "source": "can-transceiver-01",
+      "target": "power_dist_block",
+      "type": "power",
+      "sourcePin": "VCC",
+      "targetPin": "V5_OUT",
+      "voltage": "5V"
+    },
+    {
+      "source": "can-transceiver-01",
+      "target": "power_dist_block",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND",
+      "voltage": "0V"
+    },
+    {
+      "source": "spacetime_metric_modulator",
+      "target": "neural_matrix_controller",
+      "type": "data",
+      "sourcePin": "SYNC_OUT",
+      "targetPin": "GPIO_SYNC",
+      "voltage": "5V"
+    },
+    {
+      "source": "main_controller_esp32",
+      "target": "thermocouple_sensor",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "source": "main_controller_esp32",
+      "target": "can-transceiver-01",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "source": "main_controller_esp32",
+      "target": "thermocouple_sensor",
+      "type": "data",
+      "sourcePin": "MISO",
+      "targetPin": "SO",
+      "voltage": "3.3V/5V (check shifter logic note: MISO is slave-to-master, typically 5V to 3.3V divider or shifter needed but direct 3.3V logic often used for MISO if sensor is 3.3V compatible; keeping standard SPI direct path logic for return data line based on component context provided.)"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "can-transceiver-01",
+      "type": "data",
+      "sourcePin": "CAN_H",
+      "targetPin": "CANH",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "can-transceiver-01",
+      "type": "data",
+      "sourcePin": "CAN_L",
+      "targetPin": "CANL",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "precision_timing_module",
+      "target": "phase_locked_loop_controller",
+      "type": "data",
+      "sourcePin": "10MHZ_OUT",
+      "targetPin": "R_IN",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "phase_locked_loop_controller",
+      "target": "high_power_rf_amplifier",
+      "type": "data",
+      "sourcePin": "RF_OUT",
+      "targetPin": "RF_IN",
+      "voltage": "Variable"
+    },
+    {
+      "source": "high_power_rf_amplifier",
+      "target": "degenerate_stabilizer_coils",
+      "type": "power",
+      "sourcePin": "RF_OUT",
+      "targetPin": "POS",
+      "voltage": "48V AC Pulse"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "phase_locked_loop_controller",
+      "type": "data",
+      "sourcePin": "GPIO_SYNC",
+      "targetPin": "LE",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "phase_locked_loop_controller",
+      "type": "data",
+      "sourcePin": "PWM_0",
+      "targetPin": "DATA",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "high_power_rf_amplifier",
+      "type": "power",
+      "sourcePin": "V24_OUT",
+      "targetPin": "VCC_48V",
+      "voltage": "48V (via boost)"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "precision_timing_module",
+      "type": "power",
+      "sourcePin": "V3.3_OUT",
+      "targetPin": "VCC",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "gev_multiplier_stack",
+      "target": "mini_electrostatic_accelerator",
+      "type": "power",
+      "sourcePin": "DC_OUT_GEV",
+      "targetPin": "ION_SOURCE_POS",
+      "voltage": "1.2GV"
+    },
+    {
+      "source": "spacetime_metric_modulator",
+      "target": "gev_multiplier_stack",
+      "type": "data",
+      "sourcePin": "SYNC_OUT",
+      "targetPin": "SYNC_TRG",
+      "voltage": "5V"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "gev_multiplier_stack",
+      "type": "data",
+      "sourcePin": "PWM_1",
+      "targetPin": "SYNC_TRG",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "radiation_monitor_geiger",
+      "type": "power",
+      "sourcePin": "V5_OUT",
+      "targetPin": "VCC",
+      "voltage": "5V"
+    },
+    {
+      "source": "radiation_monitor_geiger",
+      "target": "neural_matrix_controller",
+      "type": "data",
+      "sourcePin": "PULSE_OUT",
+      "targetPin": "GPIO_SYNC",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "spacetime_metric_modulator",
+      "target": "sic_h_bridge_pro",
+      "type": "data",
+      "sourcePin": "CH1",
+      "targetPin": "EN",
+      "voltage": "5V"
+    },
+    {
+      "source": "cf252_feedstock",
+      "target": "high_current_ion_source",
+      "type": "power",
+      "sourcePin": "ION_GND",
+      "targetPin": "GND",
+      "voltage": "0V"
+    },
+    {
+      "source": "high_power_rf_amplifier",
+      "target": "degenerate_stabilizer_coils",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "NEG"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "high_power_rf_amplifier",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "precision_timing_module",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "source": "gev_multiplier_stack",
+      "target": "mini_electrostatic_accelerator",
+      "type": "power",
+      "sourcePin": "GND_REF",
+      "targetPin": "GND"
+    },
+    {
+      "source": "power_dist_block",
+      "target": "radiation_monitor_geiger",
+      "type": "power",
+      "sourcePin": "GND",
+      "targetPin": "GND"
+    },
+    {
+      "source": "main_controller_esp32",
+      "target": "logic-level-shifter-spi",
+      "type": "data",
+      "sourcePin": "SCK",
+      "targetPin": "LV4",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "logic-level-shifter-spi",
+      "target": "thermocouple_sensor",
+      "type": "data",
+      "sourcePin": "HV4",
+      "targetPin": "SCK",
+      "voltage": "5V"
+    },
+    {
+      "source": "main_controller_esp32",
+      "target": "logic-level-shifter-spi",
+      "type": "data",
+      "sourcePin": "MOSI",
+      "targetPin": "LV2",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "main_controller_esp32",
+      "target": "logic-level-shifter-spi",
+      "type": "data",
+      "sourcePin": "D5",
+      "targetPin": "LV3",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "main_controller_esp32",
+      "target": "logic-level-shifter-spi",
+      "type": "data",
+      "sourcePin": "D18",
+      "targetPin": "LV1",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "high_current_ion_source",
+      "type": "data",
+      "sourcePin": "PWM_0",
+      "targetPin": "CTRL",
+      "voltage": "3.3V"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "feedstock_injector",
+      "type": "data",
+      "sourcePin": "PWM_1",
+      "targetPin": "SIGNAL_IN",
+      "voltage": "3.3V"
+    }
+  ],
+  "mechanicalConnections": [
+    {
+      "label": "chassis_fasteners_m3",
+      "source": "matryoshka_outer_shell",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "label": "thermal standoff spacers",
+      "source": "matryoshka_inner_thermal_chamber",
+      "target": "matryoshka_outer_shell"
+    },
+    {
+      "label": "M3 bolts",
+      "source": "linear_rail_axis",
+      "target": "matryoshka_outer_shell"
+    },
+    {
+      "label": "ceramic clamp assembly",
+      "source": "alumina_ceramic_crucible",
+      "target": "linear_rail_axis"
+    },
+    {
+      "label": "concentric interference fit",
+      "source": "magnetic_coil_housing",
+      "target": "matryoshka_inner_thermal_chamber"
+    },
+    {
+      "label": "chassis_fasteners_m3",
+      "source": "planetary_mill_base",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "label": "press-fit stainless steel shafts",
+      "source": "planetary_gear_set",
+      "target": "planetary_mill_base"
+    },
+    {
+      "label": "M3 bolts",
+      "source": "esp32_control_mount",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "label": "M3 bolts",
+      "source": "argon_manifold_mount",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "label": "nylon insulating bolts",
+      "source": "hv_separator_insulator",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "label": "snap-fit clips",
+      "source": "ui_bezel_mount",
+      "target": "matryoshka_outer_shell"
+    },
+    {
+      "label": "M3 set screws",
+      "source": "thermocouple_sensor_mount",
+      "target": "matryoshka_inner_thermal_chamber"
+    },
+    {
+      "label": "M3 bolts",
+      "source": "stepper_driver_module_mount",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "label": "mount",
+      "source": "matryoshka_outer_shell",
+      "target": "main_power_supply"
+    },
+    {
+      "label": "mount",
+      "source": "matryoshka_inner_thermal_chamber",
+      "target": "induction_heater_module"
+    },
+    {
+      "label": "mount",
+      "source": "planetary_mill_base",
+      "target": "ball_mill_stepper"
+    },
+    {
+      "label": "mount",
+      "source": "esp32_control_mount",
+      "target": "main_controller_esp32"
+    },
+    {
+      "label": "mount",
+      "source": "magnetic_coil_housing",
+      "target": "magnetic_field_h_bridge"
+    },
+    {
+      "label": "mount",
+      "source": "argon_manifold_mount",
+      "target": "argon_solenoid_valve"
+    },
+    {
+      "label": "mount",
+      "source": "hv_separator_insulator",
+      "target": "high_voltage_generator"
+    },
+    {
+      "label": "mount",
+      "source": "ui_bezel_mount",
+      "target": "status_display"
+    },
+    {
+      "label": "mount",
+      "source": "thermocouple_sensor_mount",
+      "target": "thermocouple_sensor"
+    },
+    {
+      "label": "mount",
+      "source": "stepper_driver_module_mount",
+      "target": "stepper_driver_module"
+    },
+    {
+      "label": "internal standoffs",
+      "source": "resonate_particle_chronograph",
+      "target": "em_shielding_enclosure"
+    },
+    {
+      "label": "M3 bolts",
+      "source": "em_shielding_enclosure",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "label": "bracket mount",
+      "source": "ultrasonic_driver_array",
+      "target": "resonate_particle_chronograph"
+    },
+    {
+      "label": "concentric clamp",
+      "source": "ionic_steering_coils",
+      "target": "resonate_particle_chronograph"
+    },
+    {
+      "label": "M3 bolts",
+      "source": "ball_mill_stepper",
+      "target": "planetary_mill_base"
+    },
+    {
+      "label": "hardware",
+      "source": "ball_mill_stepper",
+      "target": "chassis_fasteners_m3"
+    },
+    {
+      "label": "M3 bolts and rubber dampeners",
+      "source": "mini_vacuum_pump",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "label": "epoxy seal and bolt-on flange",
+      "source": "vacuum_chamber_port",
+      "target": "matryoshka_outer_shell"
+    },
+    {
+      "label": "threaded fitting",
+      "source": "vacuum_pressure_sensor",
+      "target": "vacuum_chamber_port"
+    },
+    {
+      "label": "M5 through-bolts",
+      "source": "lead_shielding_enclosure",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "label": "contact adhesive",
+      "source": "borated_polyethylene_liner",
+      "target": "lead_shielding_enclosure"
+    },
+    {
+      "label": "M4 machine screws",
+      "source": "accelerator_mount",
+      "target": "matryoshka_inner_thermal_chamber"
+    },
+    {
+      "label": "nylon straps",
+      "source": "mini_electrostatic_accelerator",
+      "target": "accelerator_mount"
+    },
+    {
+      "label": "M3 nylon standoffs",
+      "source": "arcsync_reactor",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "label": "M4 heat-resistant bolts",
+      "source": "coulombus_barrier_chamber",
+      "target": "matryoshka_inner_thermal_chamber"
+    },
+    {
+      "label": "threaded coupling",
+      "source": "coulombus_barrier_chamber",
+      "target": "isotropic_field_core"
+    },
+    {
+      "label": "M3 nylon standoffs",
+      "source": "sic_h_bridge_pro",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "label": "Heavy duty zip ties",
+      "source": "resonance_capacitor_bank",
+      "target": "tesseract_outer_frame"
+    },
+    {
+      "source": "vibranium_alloy_chassis",
+      "target": "tesseract_outer_frame",
+      "label": "M6 Grade 8 bolts"
+    },
+    {
+      "source": "ln2_cooling_jacket",
+      "target": "vibranium_alloy_chassis",
+      "label": "thermal interface epoxy"
+    },
+    {
+      "source": "toroidal_flux_sensors",
+      "target": "vibranium_alloy_chassis",
+      "label": "press-fit"
+    },
+    {
+      "source": "neural_matrix_controller",
+      "target": "esp32_control_mount",
+      "label": "M3 nylon standoffs"
+    },
+    {
+      "source": "arcsync_reactor",
+      "target": "vibranium_alloy_chassis",
+      "label": "concentric alignment pins"
+    },
+    {
+      "source": "spacetime_metric_modulator",
+      "target": "tesseract_outer_frame",
+      "label": "rack mount brackets"
+    },
+    {
+      "source": "degenerate_stabilizer_coils",
+      "target": "vibranium_alloy_chassis",
+      "label": "thermally conductive epoxy"
+    },
+    {
+      "source": "quantum_state_interferometer",
+      "target": "vibranium_alloy_chassis",
+      "label": "optical flange mount"
+    },
+    {
+      "source": "high_temp_ceramic_standoffs",
+      "target": "isotropic_field_core",
+      "label": "M3 threaded fit"
+    },
+    {
+      "source": "high_temp_ceramic_standoffs",
+      "target": "vibranium_alloy_chassis",
+      "label": "M3 socket screws"
+    },
+    {
+      "source": "high_current_ion_source",
+      "target": "mini_electrostatic_accelerator",
+      "label": "KF25 vacuum flange"
+    },
+    {
+      "source": "feedstock_injector",
+      "target": "arcsync_reactor",
+      "label": "threaded NPT 1/8 port"
+    },
+    {
+      "source": "precision_timing_module",
+      "target": "esp32_control_mount",
+      "label": "M2 nylon standoffs"
+    },
+    {
+      "source": "high_power_rf_amplifier",
+      "target": "vibranium_alloy_chassis",
+      "label": "Thermal adhesive and M4 bolts"
+    },
+    {
+      "source": "phase_locked_loop_controller",
+      "target": "esp32_control_mount",
+      "label": "M2.5 standoffs"
+    },
+    {
+      "source": "gev_multiplier_stack",
+      "target": "vibranium_alloy_chassis",
+      "label": "ceramic standoff arrays"
+    },
+    {
+      "source": "cf252_feedstock",
+      "target": "high_current_ion_source",
+      "label": "hermetic containment sleeve"
+    },
+    {
+      "source": "lead_glass_viewport",
+      "target": "vibranium_alloy_chassis",
+      "label": "compression flange and lead gaskets"
+    },
+    {
+      "source": "radiation_monitor_geiger",
+      "target": "tesseract_outer_frame",
+      "label": "M3 nylon standoffs"
+    },
+    {
+      "source": "cf252_feedstock",
+      "target": "high_current_ion_source",
+      "label": "hermetic containment sleeve"
+    }
+  ],
+  "projectId": "8082a9ad-beb8-4dc3-8438-4c67e99c153b"
+}
